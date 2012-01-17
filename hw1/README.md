@@ -20,7 +20,7 @@ In these instructions, we assume you are using your CS186 inst account. We will 
 
 Log into your class account, and check out the git repository for the course:
 
-    % git clone git@github.com:cs186/sp12.git
+    % git clone git://github.com/cs186/sp12.git
 
 This will create a directory called sp12 in your home directory, which will contain a subdirectory called hw1. change directory into there and look around:
 
