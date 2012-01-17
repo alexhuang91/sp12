@@ -56,16 +56,27 @@ The script should overwrite the four csv output files, as follows:
 	* "rhode island": return row for the first token
 	
 ###Testing
-A simple Ruby unit test is provide in `tc_sanity.rb`.  If you type 
+A simple Ruby unit test is provide in `tc_sanity.rb`.  You should see something like this if you type the first line:
 
     % ruby test/tc_sanity.rb
+    ruby test/tc_sanity.rb 
+    Loaded suite test/tc_sanity
+    Started
+    .
+    Finished in 1.471638 seconds.
 
-it runs your `doit.sh` script against 5 emails taken from [Berkeley's Enron Analysis website](http://bailando.sims.berkeley.edu/enron_email.html) and compares your output to what the solution produced.
+    1 tests, 13 assertions, 0 failures, 0 errors, 0 skips
+
+    Test run options: --seed 53816
+    %
+
+The tc_sanity test runs your `doit.sh` script against 5 emails taken from [Berkeley's Enron Analysis website](http://bailando.sims.berkeley.edu/enron_email.html) and compares your output to what the solution produced.
 
 Our grading script will compare your code against the approximately [1700 emails](http://bailando.sims.berkeley.edu/enron/enron_with_categories.tar.gz) provided on that website.  To test against that data, you type:
 
     % ruby test/tc_full.rb
-  
+
+and hopefully you get output like the listing above.  
 ###Notes
 
 * If you lose the original example csv output files, you can always recreate the original copies via `git checkout <foo>.csv` or by looking on the website at [https://github.com/cs186/sp12](https://github.com/cs186/sp12).
