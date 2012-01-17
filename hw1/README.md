@@ -64,7 +64,7 @@ it runs your `doit.sh` script against 5 emails taken from [Berkeley's Enron Anal
 
 Our grading script will compare your code against the approximately [1700 emails](http://bailando.sims.berkeley.edu/enron/enron_with_categories.tar.gz) provided on that website.  To test against that data, you type:
 
-  % ruby tc_full.rb
+    % ruby tc_full.rb
   
 ###Notes
 
