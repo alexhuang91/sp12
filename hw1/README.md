@@ -52,7 +52,7 @@ The script should overwrite the four csv output files, as follows:
 * `token_counts.csv` should sum up the number of occurrences of each *distinct* token in the `tokens.csv` file.  Each row should be of the form `token, count`.
 * `state_counts.csv` is intended to store the rough result of the question "how often is each state mentioned in an email?" It should contain those rows from `token_counts.csv` with the (lowercase) name of a US state in the `token` field.  For states containing two tokens in their name, we will be a bit sloppy, returning the row for only one token as follows:
     * "new hampshire", "new jersey", "new mexico", "new york": return row for the second token
-    * "north carolina", "north dakota", "south carolina", "south dakota": return row for the second token
+    * "north carolina", "north dakota", "south carolina", "south dakota", "west virginia": return row for the second token
 	* "rhode island": return row for the first token
 	
 ###Testing
