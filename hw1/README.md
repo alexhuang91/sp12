@@ -74,13 +74,22 @@ A simple Ruby unit test is provide in `tc_sanity.rb`.  You should see something 
     Test run options: --seed 53816
     %
 
-The tc_sanity test runs your `doit.sh` script against a handful of emails taken from [Berkeley's Enron Analysis website](http://bailando.sims.berkeley.edu/enron_email.html) and compares your output to what the solution produced.
+The tc_sanity test runs your `doit.sh` script against a handful of emails taken from [Berkeley's Enron Analysis website](http://bailando.sims.berkeley.edu/enron_email.html) and compares your output to what the solution produced.  
 
 Our grading script will compare your code against the approximately [1700 emails](http://bailando.sims.berkeley.edu/enron/enron_with_categories.tar.gz) provided on that website.  To test against that data, you type:
 
     % ruby test/tc_full.rb
 
 and hopefully you get output like the listing above.  
+
+The test scripts use Ruby's [setrlimit](http://www.ruby-doc.org/core-1.9.2/Process.html#method-c-setrlimit) command to cap the amount of virtual memory your hw1.sh script allocates.  If you see something like this:
+
+    dumb.rb:3:in `block in <main>': failed to allocate memory (NoMemoryError)
+		from dumb.rb:3:in `each'
+		from dumb.rb:3:in `<main>'
+		
+then your code is not doing appropriate streaming and/or divide-and-conquer!
+
 ###Notes
 
 * If you lose the original example csv output files, you can always recreate the original copies via `git checkout <foo>.csv` or by looking on the website at [https://github.com/cs186/sp12](https://github.com/cs186/sp12).
