@@ -1,5 +1,9 @@
 def diff_files(subpath)
+  # ensure sane sort orders from UNIX sort
+  ENV['LC_ALL'] = 'C'
+  # run hw1.sh script and make sure it succeeds
   assert((system "/bin/bash hw1.sh #{REFERENCE_FILE_PATH}/#{subpath}"), "hw1 script did not return happily")
+  # compare each of the resulting csv files with reference versions
   ['mail', 'tokens', 'token_counts', 'state_counts'].each do |fname|
     assert((system "sort #{fname}.csv > #{fname}-sorted.csv"), "sort did not return happily")
     assert_equal('', `diff -q #{fname}-sorted.csv #{REFERENCE_FILE_PATH}/#{subpath}.out/#{fname}-sorted.csv`)
