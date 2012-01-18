@@ -1,7 +1,7 @@
 # Homework 1: Enron email command-line wrangling 
 
 ###Your challenge
-Given a large directory of email messages, generate csv files that capture the message contents in a structured form suitable for loading into a database, spreadsheet or statistical package.  
+Given a large directory of email messages, generate csv files that efficiently capture the message contents in a structured form suitable for loading into a database, spreadsheet or statistical package.  
 
 ###Your tools
 For this assignment, you are limited to using [Ruby](http://ruby-lang.org), [bash](http://www.gnu.org/software/bash/), and the [standard Unix utilities](http://en.wikipedia.org/wiki/List_of_Unix_utilities).  We strongly encourage you to use Ruby's built-in [CSV](http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html) and [find](http://ruby-doc.org/stdlib-1.9.2/libdoc/find/rdoc/Find.html) libraries, and the [mail](https://github.com/mikel/mail/blob/master/README.md) gem to deal with email files, directory trees, and csv files.  All of these are pre-installed on the instructional machines for you.  You should not need to use any additional Ruby gems in your solution. (You may find [ruby-debug](http://bashdb.sourceforge.net/ruby-debug.html) useful along the way -- it is also installed.)
