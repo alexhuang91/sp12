@@ -18,7 +18,7 @@ You need to be able to handle an input directory that is far larger than the mem
 You should not need to write much code in either Ruby or bash.  Take advantage of UNIX utilities as much as you can.  In particular, note that there is no need for you to write an out-of-core algorithm to complete this homework.
 
 ###Getting started
-In these instructions, we assume you are using your CS186 inst account on one of the Linux servers (hive1.cs, hive2.cs, ..., hive28.cs). 
+In these instructions, we assume you are using your **CS186 inst account on one of the Linux servers (hive1.cs, hive2.cs, ..., hive28.cs)**. 
 
 *(CS186 accounts are set up with Ruby v1.9.2 and bash version 4.2.10(1). You can code on your own computer, but the CS186 staff will only answer configuration questions pertaining to the CS186 course accounts.  And eventually you need to turn in a solution that runs "out of the box" on the instructional machines.)*
 
