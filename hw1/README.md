@@ -1,6 +1,7 @@
 # Homework 1: Enron email command-line wrangling 
 ### CS186, UC Berkeley, Spring 2012
 ### Points: [5% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
+### Note: *This homework to be done individually!*
 ### Due: Thursday, 1/26, 11:59 PM
 
 ##Description
