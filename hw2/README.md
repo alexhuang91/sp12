@@ -21,7 +21,7 @@ To start, we're going to learn how to use Postgres and practice our SQL skills o
 
 ###About the schema, Part I
 
-Peruse the schema for Part I, which is provided [here](https://github.com/cs186/sp12/blob/master/hw2/part1-schema.sql).  You will see it is a bit more complicated than the examples in the book!  Still, it is fairly simple.  There are three main tables of "facts":
+Peruse the schema for Part I, which is provided [here](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/assignments/hw2-part1-schema.sql?attredirects=0&d=1).  You will see it is a bit more complicated than the examples in the book!  Still, it is fairly simple.  There are three main tables of "facts":
 
 The `faads_main` table stores information from the [Federal Assistance Awards Data System](http://www.census.gov/govs/www/faads.html), one row for every award granted.  [Here's a note on that data](http://data.nicar.org/node/45):
 
