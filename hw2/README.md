@@ -21,7 +21,7 @@ To start, we're going to learn how to use Postgres and practice our SQL skills o
 
 ###About the schema, Part I
 
-Peruse the schema for Part I, which is provided here (*TODO*).  You will see it is a bit more complicated than the examples in the book!  Still, it is fairly simple.  There are three main tables of "facts":
+Peruse the schema for Part I, which is provided [here](https://github.com/cs186/sp12/blob/master/hw2/part1-schema.sql).  You will see it is a bit more complicated than the examples in the book!  Still, it is fairly simple.  There are three main tables of "facts":
 
 The `faads_main` table stores information from the [Federal Assistance Awards Data System](http://www.census.gov/govs/www/faads.html), one row for every award granted.  [Here's a note on that data](http://data.nicar.org/node/45):
 
@@ -265,8 +265,8 @@ To run your program:
    
 Where `FILE` is one of the following files (listed in order of increasing size):
 
-* `/home/ff/cs186/sp12/hw2/hw2/part2/test-micro.csv`: a simple synthetic graph (see a diagram at (TODO: link to diagram/micro.png");
-* `/home/ff/cs186/sp12/hw2/part2/test-sm.csv`: a little larger synthetic graph (see a diagram at (TODO: link to diagram/sm.png")
+* `/home/ff/cs186/sp12/hw2/hw2/part2/test-micro.csv`: a simple synthetic graph ((see a diagram)[https://github.com/cs186/sp12/raw/master/hw2/diagram/test-micro-diagram.png])
+* `/home/ff/cs186/sp12/hw2/part2/test-sm.csv`: a little larger synthetic graph ((see a diagram)[https://github.com/cs186/sp12/raw/master/hw2/diagram/test-sm-diagram.png])
 * `/home/ff/cs186/sp12/hw2/part2/enron-med.csv`: a subset of the enron database
 * `/home/ff/cs186/sp12/hw2/part2/enron-lg.csv`: the entire enron data set (this is really big, so only run this for fun!)
  
