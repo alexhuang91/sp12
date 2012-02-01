@@ -89,6 +89,12 @@ This may take a while ... especially the final ANALYZE step (which gathers stati
 	% psql USASpending
 	% USASpending=# \dt
 
+***Edit (1/31/12, more examples):*** Try running a few sample commands in the `psql` console and see what they do:
+
+        % USASpending=# \d faads_main
+        % USASpending=# SELECT recipient_name, total_funding_amount FROM faads_main ORDER BY recipient_name;
+        % USASpending=# SELECT obligatedamount, agency_desc FROM lookup_agency_code, fpds_award_details WHERE lookup_agency_code.agency = fpds_award_details.idvagencyid;
+
 ###Write these queries
 
 We've provided a `hw2_warmup.sql` file to help you get started. In the file, you'll find a `CREATE VIEW` statement for each question below, specifying a particular view name (like q2) and list of column names (like `recip_id`, `recipient_name`). The view name and column names constitute the interface against which we will grade this assignment. In order words, don't change or remove these names. Your job is to fill out the view definitions in a way that populates the views with the right tuples.
