@@ -15,6 +15,12 @@ a non-trivial social network analysis algorithm in SQL.
 ###Tools
 For this assignment, you are limited to using Postgres and Ruby.  To follow these instructions **use your CS186 inst account on one of the Linux servers (hive1.cs, hive2.cs, ..., hive28.cs)**. If you do not use one of the hive servers, your tests may not execute correctly.
 
+To obtain the homework files, you can run 
+
+   % git pull
+
+In your `cs186/sp12` repository that you previously cloned for `hw1`.
+
 ##Part I: SQL Warmup
 
 To start, we're going to learn how to use Postgres and practice our SQL skills on some basic queries.
