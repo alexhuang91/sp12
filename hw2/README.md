@@ -17,7 +17,7 @@ For this assignment, you are limited to using Postgres and Ruby.  To follow thes
 
 To obtain the homework files, you can run 
 
-   % git pull
+    % git pull
 
 In your `cs186/sp12` repository that you previously cloned for `hw1`.
 
