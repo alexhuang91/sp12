@@ -136,10 +136,11 @@ aid from more than 10% of the major federal agencies?  Return the
 recipient id (`recip_id`) and name (`recipient_name`) and the number
 of major agencies (`maj_agency_cat`) that that they got aid from.  For
 this question, assume we can distinguish recipients by the pair of
-columns (`recipient_id`, `recipient_name`).  (Hint: you might find it
-easier to first try counting up the number of distinct agencies that
-each recipient has gotten aid from, and after that figure out how to
-threshhold the result at 10%.)
+columns (`recip_id`, `recipient_name`) ***(edit 2/1/2012: fixing
+column name)***.  (Hint: you might find it easier to first try
+counting up the number of distinct agencies that each recipient has
+gotten aid from, and after that figure out how to threshhold the
+result at 10%.)
     
 ##Help?
 
