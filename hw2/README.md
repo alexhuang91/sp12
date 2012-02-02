@@ -276,9 +276,9 @@ To run your program:
 
 	% ruby analyze_enron.rb FILE
    
-Where `FILE` is one of the following files (listed in order of increasing size):
+Where `FILE` is one of the following files (listed in order of increasing size) ***(edit: 2/2/2012, path typo)***:
 
-* `/home/ff/cs186/sp12/hw2/hw2/part2/test-micro.csv`: a simple synthetic graph ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-micro-diagram.png))
+* `/home/ff/cs186/sp12/hw2/part2/test-micro.csv`: a simple synthetic graph ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-micro-diagram.png))
 * `/home/ff/cs186/sp12/hw2/part2/test-sm.csv`: a little larger synthetic graph ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-sm-diagram.png))
 * `/home/ff/cs186/sp12/hw2/part2/enron-med.csv`: a subset of the enron database
 * `/home/ff/cs186/sp12/hw2/part2/enron-lg.csv`: the entire enron data set (this is really big, so only run this for fun!)
