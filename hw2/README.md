@@ -118,18 +118,20 @@ Create views in the following queries:
 
 q1. In the `fpds_award_details` table, find all the entries with a value for
   the `obligatedamount` attribute that is greater than $100,000, and return the
-  contractor name and obligated amount.
+  `contractorname` and obligated amount.
   
 q2. Which Universities are receiving money? In the
  `fpds_award_details` table, find the `contractorname` and `obligatedamount`
   for all contractors whose name contains the
-  substring "UNIV", ordered by the amount they are due.
+  substring "UNIV". ***(edit 2/1/2012: got rid of requirement to sort results)***
 
 q3. Find the number of contracts (rows) in the `fpds_contract_vendors` table
    for vendors that are veteran-owned businesses.
   
 q4. From which major agencies has 'SCHOOL OF COMPUTERS INC' *not* gotten aid?
    Return distinct `majagency_tr` and `current_agency_head` fields.
+ (Warning: This question is much more complicated than the previous ones.
+  Examine some of the tables to see how to pull the data together.)
 
 q5. Which recipients of federal awards (in `faads_main`) have gotten
 aid from more than 10% of the major federal agencies?  Return the
@@ -140,7 +142,7 @@ columns (`recip_id`, `recipient_name`) ***(edit 2/1/2012: fixing
 column name)***.  (Hint: you might find it easier to first try
 counting up the number of distinct agencies that each recipient has
 gotten aid from, and after that figure out how to threshhold the
-result at 10%.)
+result at 10%. Do not hard code the 10% threshold.)
     
 ##Help?
 
@@ -153,6 +155,8 @@ To run the test:
 (Make sure you're invoking the script either directly or with `bash`; running it with `sh` may give you false passes!)
 
 You may want to become familiar with the UNIX [diff](http://en.wikipedia.org/wiki/Diff) command, if you're not already, because our tests print the `diff` for any query executions that don't match.  If you care to look at the query outputs directly, ours are located at `/home/ff/cs186/sp12/hw2/part1/out/p1.q{1-5}.txt`. ***(edit 2/1/2012: fixed path)*** Your view output should be located in your solution's `test-output` directory once you run the tests.
+
+**Note:** It doesn't matter how you sort your results; we will reorder them before comparing. Note, however, that our test query output is sorted, so if you're trying to compare yours and ours manually line-by-line, make sure you use the proper ORDER BY clause. The order should be apparent from looking at our test query output. ***(edit 2/1/2012: added this note)***
 	
 #Part II: Betweenness Centrality
 
