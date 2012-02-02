@@ -151,7 +151,7 @@ To run the test:
 	
 (Make sure you're invoking the script either directly or with `bash`; running it with `sh` may give you false passes!)
 
-You may want to become familiar with the UNIX [diff](http://en.wikipedia.org/wiki/Diff) command, if you're not already, because our tests print the `diff` for any query executions that don't match.  If you care to look at the query outputs directly, ours are located at `/home/ff/cs186/sp12/hw2/part2/out/p1.q{1-5}.txt`. Your view output should be located in your solution's `test-output` directory once you run the tests.
+You may want to become familiar with the UNIX [diff](http://en.wikipedia.org/wiki/Diff) command, if you're not already, because our tests print the `diff` for any query executions that don't match.  If you care to look at the query outputs directly, ours are located at `/home/ff/cs186/sp12/hw2/part1/out/p1.q{1-5}.txt`. ***(edit 2/1/2012: fixed path)*** Your view output should be located in your solution's `test-output` directory once you run the tests.
 	
 #Part II: Betweenness Centrality
 
