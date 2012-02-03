@@ -4,6 +4,10 @@
 ### Note: *This homework is to be done individually!*
 ### Due: Friday, February 10, 2012, 11:59 PM
 
+***(NOTE: We issued a breaking change to enron_analyze.rb on 2/2/2012,
+   11:20PM. Please issue `git pull` if you checked out the repository
+   before then)***
+
 ###Description
 
 In this homework, we will exercise your newly acquired SQL skills.  
@@ -205,9 +209,9 @@ By contrast, your SQL implementation of all-pairs/all-shortest-paths will use a
 [declarative](http://en.wikipedia.org/wiki/Declarative_programming), "batch" algorithm designed for efficient execution within a database.  This algorithm takes a [dynamic programming](http://en.wikipedia.org/wiki/Dynamic_programming) approach to the problem:
 it iteratively finds paths of increasing length (in terms of hop count, or number of links in the path).
 
-Note that our graphs are directed: if `a` sent a message to `b`, there is an edge between them. The edge weight between `a` and `b` is `1/(the number of messages betwen a and b)`, reflecting the fact that people emailing more represents a 'smaller' communication cost. This means that path cost is not the same as hop count!
+Note that our graphs are directed: if `a` sent a message to `b`, there is an edge between them. The edge weight between `a` and `b` is `1/(the number of messages betwen a and b)`, reflecting the fact that people emailing more represents a 'smaller' communication cost. This means that path cost is not the same as hop count! 
 
-The pseudocode for our algorithm, annotated by (relationname) in our code, is as follows
+The pseudocode for our algorithm, annotated by (relationname) in our code, is as follows:
 
 	(paths) = set of shortest paths we've seen so far
 	(paths_to_update) = set of paths we added at step i
@@ -216,9 +220,6 @@ The pseudocode for our algorithm, annotated by (relationname) in our code, is as
   
 	//begin initialization
 	
-	// we know these from the enron relation
-	insert all links of length 1 hop into (paths)
-   
 	// to start, we need to check all links
 	insert all links of length 1 hop into (paths_to_update)
 	
@@ -247,6 +248,10 @@ The pseudocode for our algorithm, annotated by (relationname) in our code, is as
 	   (new_paths) = empty set
   
 	   i++
+
+ ***(edit 2/2/2012: removed unnecessary insertion of 1-hop paths into
+    (paths) to start; exercise to reader: why are they unnecessary?
+    why didn't this affect correctness?)***
 		 
 After computing these paths, we use them to compute betweenness centrality.
 
@@ -284,6 +289,7 @@ Where `FILE` is one of the following files (listed in order of increasing size) 
 
 * `/home/ff/cs186/sp12/hw2/part2/test-micro.csv`: a simple synthetic graph ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-micro-diagram.png))
 * `/home/ff/cs186/sp12/hw2/part2/test-sm.csv`: a little larger synthetic graph ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-sm-diagram.png))
+* `/home/ff/cs186/sp12/hw2/part2/test-multpath.csv`: a more complex synthetic graph with many shortest paths ([see a diagram](https://github.com/cs186/sp12/raw/master/hw2/diagram/test-multpath-diagram.png))
 * `/home/ff/cs186/sp12/hw2/part2/enron-med.csv`: a subset of the enron database
 * `/home/ff/cs186/sp12/hw2/part2/enron-lg.csv`: the entire enron data set (this is really big, so only run this for fun!)
  

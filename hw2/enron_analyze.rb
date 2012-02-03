@@ -50,19 +50,16 @@ conn.exec("
 
 # calculate all-pairs, all-paths shortest paths first
 conn.exec("
- --insert first paths: 1-hop paths specified in input relation
+ --paths_to_update starts off with all 1-hop paths
+ --because we need to check all of them for longer paths
  --paths are ARRAYS:
  --http://www.postgresql.org/docs/9.1/static/arrays.html
- INSERT INTO paths SELECT
+ INSERT INTO paths_to_update SELECT
       sender,
       receiver,
       ARRAY[sender],
       1/nummsg
- FROM enron;
-
- --paths_to_update starts off with all 1-hop paths
- --because we need to check all of them for longer paths
- INSERT INTO paths_to_update SELECT * FROM paths;"
+ FROM enron;"
  )
 
 i = 0
@@ -162,17 +159,28 @@ conn.exec("
  -- figure out how many paths there were for each s,t, pair
  -- then apply the betweenness_centrality formula
  -- the Wikipedia article will help here!
- INSERT INTO betweenness_centrality SELECT
-      temp.v,
-      SUM(???)
-      FROM (SELECT
-                      B.v,
-                      COUNT(???)/COUNT(???) AS frac
-                FROM between_paths B, paths P
-                WHERE ??? = ??? AND ??? = ???
-                GROUP BY P.s, B.v, P.t)
-               AS temp
-      GROUP BY temp.v;
+ INSERT INTO betweenness_centrality (
+   SELECT v, SUM(frac) FROM 
+	 (SELECT
+	   vCount.v,
+	   (vCount.cnt::real)/totCount.cnt as frac
+	  FROM 
+		(SELECT
+		   s,
+		   t,
+		   COUNT(*) AS cnt
+		 FROM paths 
+		 GROUP BY s, t) AS (??? choose either totCount OR vCount ???),
+	   (SELECT DISTINCT 
+		  s,
+		  t,
+		  v,
+		  COUNT(*) AS cnt
+		FROM between_paths
+		GROUP BY ???,???,???) AS (??? choose either totCount OR vCount ???)
+	  WHERE ??? = totCount.s
+	  AND ??? = totCount.t) AS sigmas
+   GROUP BY v); 
 
  -- insert all entities who weren't on any relevant shortest paths
  -- everyone should have a listing in betweenness_centrality
