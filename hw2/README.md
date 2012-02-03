@@ -6,7 +6,7 @@
 
 ***(NOTE: We issued a breaking change to enron_analyze.rb on 2/2/2012,
    11:20PM. Please issue `git pull` if you checked out the repository
-   before then)***
+   before then. The structure of query #5 has changed.)***
 
 ###Description
 
@@ -303,14 +303,21 @@ There are many intermediate steps to this computation, so we've provided a harne
    
 Keep in mind that you shouldn't edit the code blocks responsible for this (denoted `DO NOT EDIT`) or the main control flow.  We will be using this functionality for *grading*, so, if this functionality breaks, you will receive *ZERO* credit for this portion of the assignment.
 
-**We've provided a test script for the micro and sm datasets!**
+**We've provided test scripts for the micro, sm, and multpath datasets!**
 
 	% test/p2-test-bc-micro.sh
 	% test/p2-test-bc-sm.sh
+	% test/p2-test-bc-multpath.sh
+
+***(edit: 2/2/2012 11:20PM; added multpath test case)***
 	
 (Make sure you're invoking the script either directly or with `bash`; running it with sh` may give you false passes!)
 
 Again, we'll print any differences between your query results and our query results.  Our query results are located in `/home/ff/cs186/sp12/hw2/part2/out/`, and your query results should be located in your solution's `test-output` directory. `test-micro` should break after 2 iterations through the loop, and `test-sm` should break after three.
+
+***Make sure to run your script on at least enron-med.csv. Passing
+   tests is good and well, but there's no replacement for playing
+   with REAL data!***
 
 ##What to turn in
 
