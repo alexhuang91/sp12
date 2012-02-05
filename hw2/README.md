@@ -194,7 +194,7 @@ requires two steps:
 We've already parsed the Enron sender-receiver data set for you and
 defined the intermediate tables, views, and program flow you'll need
 to complete both of these steps. Take a first read through
-`analyze_enron.rb` to understand the control flow.
+`enron_analyze.rb` to understand the control flow.
 
 If you look at pseudocode for a shortest-paths algorithm
 like [Djikstra's
@@ -259,7 +259,7 @@ After computing these paths, we use them to compute betweenness centrality.
 
 Our implementation is almost done but we need your help to fill in
 some of the holes!  We've specifically left holes (marked by `TO COMPLETE` and `???`) in our
-Ruby implementation, `analyze_enron.rb` (operating on the `enron_stats` database) for you to fill in.
+Ruby implementation, `enron_analyze.rb` (operating on the `enron_stats` database) for you to fill in.
 You may find alternate ways to implement these queries, and we
 encourage you to experiment. However, you shouldn't need to do so,
 and, if you do change the query structure, *make sure that your output
@@ -283,7 +283,7 @@ In summary, you need to fill in the queries to:
 
 To run your program:
 
-	% ruby analyze_enron.rb FILE
+	% ruby enron_analyze.rb FILE
    
 Where `FILE` is one of the following files (listed in order of increasing size) ***(edit: 2/2/2012, path typo)***:
 
@@ -299,7 +299,7 @@ Where `FILE` is one of the following files (listed in order of increasing size) 
 
 There are many intermediate steps to this computation, so we've provided a harness that lets you examine the contents of your views as you iterate over the shortest paths graph.  To exit your program after iteration `i`, run 
 
-	% ruby analyze_enron.rb FILE i
+	% ruby enron_analyze.rb FILE i
    
 Keep in mind that you shouldn't edit the code blocks responsible for this (denoted `DO NOT EDIT`) or the main control flow.  We will be using this functionality for *grading*, so, if this functionality breaks, you will receive *ZERO* credit for this portion of the assignment.
 
@@ -322,6 +322,6 @@ Again, we'll print any differences between your query results and our query resu
 ##What to turn in
 
 All of your code should be contained in two files:
-`hw2_warmup.sql` and `analyze_enron.rb`
+`hw2_warmup.sql` and `enron_analyze.rb`
 
 `cd` into your solution's directory and run the `submit hw2` command.  It will automatically collect the relevant files. You don't need to submit any other files, and, if you do, they will be ignored.
