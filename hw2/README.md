@@ -60,6 +60,8 @@ Next launch the database server postmaster:
 	
 This will start the server running in the background, logging any log messages such as errors to log.txt.  The server is accessed over TCP/IP using a unique port assigned to your $PGPORT environment variable, so it won't conflict with anyone else's server. Check the file log.txt immediately after launching for any error messages.
 
+***(As of 2/5/2011, we're having some problems with the inst infrastructure. We've described a workaround at http://piazza.com/class#spring2012/cs186/335)***
+
 Now that the server is running, you can create a database, and start up the command-line interface psql to send SQL commands to that database:
 
 	% createdb test
