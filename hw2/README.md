@@ -313,7 +313,7 @@ Keep in mind that you shouldn't edit the code blocks responsible for this (denot
 
 ***(edit: 2/2/2012 11:20PM; added multpath test case)***
 	
-(Make sure you're invoking the script either directly or with `bash`; running it with sh` may give you false passes!)
+(Make sure you're invoking the script either directly or with `bash`; running it with `sh` may give you false passes!)
 
 Again, we'll print any differences between your query results and our query results.  Our query results are located in `/home/ff/cs186/sp12/hw2/part2/out/`, and your query results should be located in your solution's `test-output` directory. `test-micro` should break after 2 iterations through the loop, and `test-sm` should break after three.
 
