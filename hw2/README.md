@@ -213,7 +213,7 @@ it iteratively finds paths of increasing length (in terms of hop count, or numbe
 
 Note that our graphs are directed: if `a` sent a message to `b`, there is an edge between them. The edge weight between `a` and `b` is `1/(the number of messages betwen a and b)`, reflecting the fact that people emailing more represents a 'smaller' communication cost. This means that path cost is not the same as hop count! 
 
-The pseudocode for our algorithm, annotated by (relationname) in our code, is as follows:
+The pseudocode for our algorithm, annotated by (relationname) in our code, is as follows ***(edit 2/7/2012: clarifying pseudocode)***:
 
 	(paths) = set of shortest paths we've seen so far
 	(paths_to_update) = set of paths we added at step i
@@ -242,7 +242,9 @@ The pseudocode for our algorithm, annotated by (relationname) in our code, is as
 		  --paths that are shorter than the paths in (paths) that have the same sender/receiver pairs
 	   
 	   //now store the "better" paths of length i hops in (paths)
-	   remove all paths from (paths) where path is in (paths_to_update)
+	   remove all paths from (paths) where
+               path is in (paths_to_update) and the path in (paths_to_update)
+               is strictly cheaper than the path in (paths)
 	   add all paths from (paths_to_update) to (paths)
 	   
 	   // when we go to the next iteration, need to swap the sets
