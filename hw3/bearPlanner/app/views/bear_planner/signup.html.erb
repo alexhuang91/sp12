@@ -1,0 +1,11 @@
+<h2> Sign Up! </h2>
+<% if !session[:uid].nil? %>
+  <center><%= "Please log out first" %><br>
+  <%= link_to 'logout', :action=>"logout" %></center>
+<% else  %>
+  <p> <center>
+  <%= params[:notice] %><br>
+  Sign up below in order to get started with bearplanner today! </center></p>
+  <br>
+  <%= render "signup_form" %>
+<% end %>

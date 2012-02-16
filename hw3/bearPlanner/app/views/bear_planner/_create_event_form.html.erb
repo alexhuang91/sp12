@@ -1,0 +1,30 @@
+<%= form_tag :action=>"create_event", :method=>:create_event do %>
+  <div class="field">
+    <%= label_tag :eventName, "Name: " %><br />
+    <%= text_field_tag :eventName, nil, :placeholder=>"Enter your new event name" %>
+  </div>
+  <div class="field">
+    <%= label_tag :cal_id, "Calendar: " %><br />
+    <%= select_tag "cal_id", options_for_select(@calendars, params[:cal_id])  %><br>
+  </div>
+  <div class="field">
+    <%= label_tag :eventStarts, "Start Time: " %><br />
+    <%=text_field_tag "starts_at" %>
+  </div>
+  <div class="field">
+    <%= label_tag :eventHours, "End Time: " %><br />
+    <%= text_field_tag "ends_at"%>
+  </div>
+  <div class="field">
+    <%= label_tag :invitees, "Invite: "%> <br>
+    <font size="1"> Enter a comma seperated list of usernames to invite </font><br>
+    <%= text_field_tag :invitees, nil  %>
+  </div>
+  <div class="field">
+    <%= label_tag :inviteMessage, "Invitation Message: " %><br>
+    <%= text_area_tag :inviteMessage, nil, :rows=>8, :cols=>50 %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Create Event" %>
+  </div>
+<% end %>

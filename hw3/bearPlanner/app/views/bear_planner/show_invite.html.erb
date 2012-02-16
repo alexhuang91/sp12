@@ -1,0 +1,12 @@
+<h2> Invitation for <%=@eventName %> </h2>
+<center>
+<%= params[:notice] %> <br> <br>
+<%= form_tag :action=>"show_invite", :invite_id=>params[:invite_id],:method=>:show_invite do %>
+Sent by <%= @eventUserName %><br/>
+with message: <%= @inviteMessage %><br/><br/>
+Starts at: <%= @eventStarts.strftime("%m/%d/%y at %I:%M %p") %><br>
+Ends At: <%= @eventEnds.strftime("%m/%d/%y at %I:%M %p") %><br> <br>
+<%= label_tag "Assign to Calendar:" %>
+<%= select_tag :cal_id, options_for_select(@calendars) %><br>
+<%= submit_tag "Accept"%> | <%= submit_tag "Reject"%>
+<% end %>

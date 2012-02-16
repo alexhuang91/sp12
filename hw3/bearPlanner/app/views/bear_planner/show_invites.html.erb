@@ -1,0 +1,10 @@
+<h2> Pending Invites </h2>
+<center>
+<%= params[:notice] %>
+<u1>
+<% @allInvitees.each do |invite| %>
+  <li>
+  <%= link_to invite['eventName'], :action=>"show_invite", :invite_id=>invite['inviteId'] %>
+  </li>
+<% end %>
+</center>

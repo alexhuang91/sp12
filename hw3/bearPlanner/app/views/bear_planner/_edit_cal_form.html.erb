@@ -1,0 +1,16 @@
+
+<%= form_tag :action=>"edit_calendar", :method => :edit_calendar , :cal_id=>params[:cal_id] do %>
+  <div class ="field">
+    <%= label_tag :calName, "Name: " %> <br />
+    <%= text_field_tag :calName, @calName, :placeholder=>"Enter your new calendar name" %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :calDescription, "Description: " %> <br />
+    <%= text_area_tag :calDescription, @calDescription, :rows=>10, :cols=>30 %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Edit Calendar" %>
+  </div>
+<% end %>

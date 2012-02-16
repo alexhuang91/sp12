@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> BearPlanner </title>
+<%= stylesheet_link_tag "myglobal" %>
+<%= stylesheet_link_tag "960" %>
+<%= stylesheet_link_tag "jquery" %>
+<%= javascript_include_tag "application" %>
+<style type="text/css" media="screen">
+
+
+</style>
+
+</head>
+<body>
+<div class = "container_12">
+<div id="outerHeader">
+<div id="header">
+
+<div class="prefix_1 grid_7">
+<div id="logo">
+<%= link_to image_tag('/assets/logo.jpg'), :action=>"home" %> 
+</div>
+</div>
+<div class="grid_4">
+<div id="logo">
+<%= link_to 'calendars', :action=>'show_calendars' %> | 
+<%= link_to 'pending invites', :action=>'show_invites' %>
+</div>
+</div>
+</div>
+</div>
+
+<div id="main">
+<div class= "prefix_2 grid_8 suffix_2 ">
+<%= yield -%>
+</div>
+</div>
+<br>
+<center>
+<div id="footer">
+<div id="logo">
+<%= link_to "sign up", :action => 'signup' %> | 
+<% if session[:uid].nil? %>
+<%= link_to "login", :action => 'login' %>
+<% else %>
+<%= link_to "logout", :action => 'logout' %> 
+<% end %>
+</div>
+</center>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h2> Edit Calendar </h2>
+<center>
+<%= params[:notice] %>
+<%= render "edit_cal_form" %>
+<%= link_to 'back to calendar', :action=>'show_calendar', :cal_id=>params[:cal_id] %>
+</center>

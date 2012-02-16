@@ -1,0 +1,6 @@
+<h2> New Event </h2>
+<center>
+<%= params[:notice] %>
+<%= render "create_event_form" %>
+<%= link_to 'back to Calendar', :action=>"show_calendar", :cal_id=>params[:cal_id] %>
+</center>

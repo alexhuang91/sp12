@@ -1,0 +1,15 @@
+<%= form_tag :action=>"create_calendar", :method => :create_calendar do %>
+  <div class ="field">
+    <%= label_tag :calName, "Name: " %> <br />
+    <%= text_field_tag :calName, nil, :placeholder=>"Enter your new calendar name" %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :calDescription, "Description: " %> <br />
+    <%= text_area_tag :calDescription, nil, :rows=>10, :cols=>30 %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Create Calendar" %>
+  </div>
+<% end %>

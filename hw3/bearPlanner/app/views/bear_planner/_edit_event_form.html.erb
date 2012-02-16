@@ -1,0 +1,37 @@
+<%= form_tag :action=>"edit_event", :method=>:edit_event, :event_id=>params[:event_id], :old_cal_id=>params[:cal_id] do %>
+  <div class="field">
+    <%= label_tag :eventName, "Name: " %><br />
+    <%= text_field_tag :eventName, @eventName  %>
+  </div>
+  <div class="field">
+    <%= label_tag :cal_id, "Calendar: " %><br />
+    <%= select_tag "cal_id", options_for_select(@calendars, params[:cal_id])  %><br>
+  </div>
+  <div class="field">
+    <%= label_tag :eventStarts, "Start Time: " %><br />
+    <%=text_field_tag "starts_at", @eventStarts %>
+  </div>
+  <div class="field">
+    <%= label_tag :eventEnds, "End Time: " %><br />
+    <%= text_field_tag "ends_at", @eventEnds %>
+  </div>
+  <% if !@invitees.nil? %>
+  <div class="field">
+    <%= label_tag :invitees, "Invite: "%> <br>
+    <font size="1"> Enter a comma seperated list of usernames to invite </font><br>
+    <%= text_field_tag :invitees, nil  %>
+    <br> Currently Inviting: <br>
+    <% @invitees.each do |invite| %>
+      <%= invite['name'] %>, 
+    <% end %>
+  </div>
+  <div class="field">
+    <%= label_tag :inviteMessage, "Invitation Message: " %><br>
+    <%= text_area_tag :inviteMessage, @inviteMessage, :rows=>8, :cols=>50 %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Edit Event" %>
+  </div>
+  <% end %>
+<% end %>
+<%= link_to 'Back to Calendar', :action=>"show_calendar", :cal_id=>params[:cal_id] %>

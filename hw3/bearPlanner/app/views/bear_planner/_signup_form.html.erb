@@ -1,0 +1,17 @@
+<%= form_tag :action=>"signup", :method => :signup do %>
+  <center>
+  <div class = "field">
+    <%= label_tag :username, "username " %> <br />
+    <%= text_field_tag :username, nil, :placeholder=>"Enter your new username" %>
+  </div>
+
+  <div class ="field">
+    <%= label_tag :password, "password " %> <br />
+    <%= text_field_tag :password, nil, :type=>"password", :placeholder=>"Enter your new password " %>
+  </div>
+  
+  <div class="actions">
+    <%= submit_tag "Create Account" %>
+  </div>
+  </center>
+<% end %>

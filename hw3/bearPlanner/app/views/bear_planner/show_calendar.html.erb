@@ -1,0 +1,28 @@
+<h2> <%= @calName %> </h2>
+<center><%= params[:notice] %></center>
+<h3> Description </h3>
+<% if !@calDescription.nil? %>
+  <center>
+  <%= @calDescription %>
+  </center>
+<% end %>
+<h3>Events</h3> 
+<p>
+<center>
+<u1 type="disc">
+<% @eventArray.each do |event| %>
+  <li> <font color=#0d9ee5 ><b><%= event['name'] %> </b></font></li>
+  Starts: <%= event['starts_at'].strftime("%m/%d/%y at %I:%M %p") %>
+<br>  Ends: <%= event['ends_at'].strftime("%m/%d/%y at %I:%M %p") %> <br>
+  
+  <%= link_to 'edit', :action=>"edit_event", :event_id=>event['id'], :cal_id=>params[:cal_id] %>
+  | <%= link_to 'delete', :action=>"delete_event", :event_id=>event['id'], :cal_id=>params[:cal_id] %>
+  
+<% end %>
+</u1>
+</center>
+</p>
+<center><%= link_to 'new event', :action=>"create_event", :cal_id=>params[:cal_id] %></center>
+<br>
+<center> <%= link_to 'edit calendar', :action=>"edit_calendar", :cal_id=>params[:cal_id] %> | 
+<%= link_to 'delete calendar', :action=>"delete_calendar", :cal_id=>params[:cal_id] %></center>

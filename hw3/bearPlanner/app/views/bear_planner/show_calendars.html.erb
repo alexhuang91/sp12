@@ -1,0 +1,16 @@
+<h2> Calendars </h2>
+<p>
+<center> <%= params[:notice] %> </center><br>
+<div class = "container_12">
+<div class =" prefix_3 grid_6 suffix_3">
+<u1 type="disc">
+<% @calendarArray.each do |cal| %>
+    <li>
+    <%= link_to cal['name'], :action => "show_calendar", :cal_id => cal['id'] %>
+    </li>
+<% end %>
+</u1></p>
+</div>
+</div>
+<center><%= link_to 'new calendar', :action=>"create_calendar" %></center>
+<br>
