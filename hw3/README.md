@@ -111,14 +111,14 @@ NOTE: If you are working on an inst machine any command beginning with "rails" W
 
 This will create a bunch of stuff for your new model ("Something").  The important files for our purposes are:
 
-    % ~/hw4/bearplanner/app/models/something.rb
-    % ~/hw4/bearplanner/db/migrate/[some_unique_id]_create_somethings.rb
+    % ~/hw3/bearplanner/app/models/something.rb
+    % ~/hw3/bearplanner/db/migrate/[some_unique_id]_create_somethings.rb
 
 You would put the table columns (including columns for foreign keys) in the _create_somethings.rb file (see ~/hw4/rubysketch/db/migrate/.
 
 As an example, we have given you a migration for the "User" model (users table).  When you ran the "rake db:migrate" command above, Rails created the corresponding "users" table in Postgres.  You can find the migration in:
 
-    % ~/hw4/bearplanner/db/migrate/20100415141316_create_users.rb
+    % ~/hw3/bearplanner/db/migrate/20120205182312_create_users.rb
 
 This migration creates a table called "Users" with columns:
  
