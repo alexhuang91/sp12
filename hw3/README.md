@@ -271,7 +271,7 @@ Since you created your own models you will need to plug them  into our views thr
     * If request.post?
       * params[:calName] - new name of the calendar
       * params[:calDescription] - new description of the calendar
-  * Output
+  * Output - set these whether or not request.post is set
     * @calName - original name of the calendar
     * @calDescription - original description of the calendar
 
