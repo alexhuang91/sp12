@@ -46,7 +46,7 @@ To obtain the homework files, you can run
 
 In your `cs186/sp12` repository that you previously cloned for `hw1`. The app can be found under 'hw3/bearplanner'. If you are on a VM you can obtain the git directory by running:
 
-    % git clone git@github.com:cs186/sp12.git
+    % git clone git://github.com/cs186/sp12.git
 
 
 #### Running the app locally
