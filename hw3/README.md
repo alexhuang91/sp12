@@ -133,7 +133,7 @@ You can enforce integrity constraints in the database itself by adding them to t
 ### ActiveRecord Intro: Relationships
   You can optionally specify any relationships with other models (i.e., using has_one, has_many, belongs_to, and has_and_belongs_to_many) in the app/models/[modelname].rb file.
 
-  For the "User" model, the corresponding "~/hw4/rubysketch/models/user.rb" is quite boring, because there are no relationships to define (we've only given you one model!).
+  For the "User" model, the corresponding "~/hw3/bearplanner/models/user.rb" is quite boring, because there are no relationships to define (we've only given you one model!).
 
   It is not required to specify relationships -- you can successfully complete the assignment by not editing any files in the "models/" directory.  However, specifying relationships makes writing code to access your database a bit simpler, as we highlight in the example below:
 
@@ -268,6 +268,9 @@ Since you created your own models you will need to plug them  into our views thr
     * after form submitted if there is an error redirect to "edit_calendar" with params[:cal_id] set and params[:notice] set as "An error has occurred."
   * Input 
     * params[:cal_id] - An identifier of the calendar
+    * If request.post?
+      * params[:calName] - new name of the calendar
+      * params[:calDescription] - new description of the calendar
   * Output
     * @calName - original name of the calendar
     * @calDescription - original description of the calendar
