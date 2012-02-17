@@ -197,7 +197,7 @@ Since you created your own models you will need to plug them  into our views thr
   * If a user is logged in session[:uid] will contain their user id, otherwise it will be null.
   * All other input will be given to you in the "params" hash. 
   * You will give output by assigning it to the @VARIABLE variables we instruct you to. 
-  * The views really on these variables having SPECIFIC names so please make sure you are accurate. 
+  * The views rely on these variables having SPECIFIC names so please make sure you are accurate. 
   * Check out the before_filter lines at the top of the application "login_required" is definited for you in application_controller.rb, but you will need to implement the others. 
     * These are all methods that a run before the bear_planner_controller methods, in order to verfiy that a user is logged in and accessing an event/calendar/invite that they own before proceeding with the controller method.
   * When the user has the option to submit a form, request.post? will return true if the user has submitted the form and false otherwise (see login() and signup()). 
