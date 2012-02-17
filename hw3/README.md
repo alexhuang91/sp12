@@ -10,7 +10,8 @@ In the rehaul of the calmail system UC Berkeley CIO Shel Waggener has hired you 
   
   * The ability to signup / login / logout users
     + Users must have a unique username
-    + Users must have a username and password
+    + Users must have a username
+    + Users may optionally have a password
   * Each user can create and view multiple calendars
     + Within the scope of a single user, calendar names are unique
     + Calendars must have a name, and can optionally have a description
