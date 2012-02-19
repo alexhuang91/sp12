@@ -369,7 +369,7 @@ These are in place to ensure you can't access the information of another user, w
   * Output: None
 
 ### Testing 
-You can test out any ruby code by going into "bearplanner/" folder, and typing "rails console".  This will provide you with an interactive Rails shell, where you can run any ActiveRecord queries using the tables and models you have defined.  Additionally, if you want to directly call any methods you have defined in ~/hw4/bearplanner/app/controllers/bear_planner_controller.rb, you must first type the line: "include Helpers".
+You can test out any ruby code by going into "bearplanner/" folder, and typing "rails console".  This will provide you with an interactive Rails shell, where you can run any ActiveRecord queries using the tables and models you have defined.   To learn about what you can do in the rails console check out this link : http://railsonedge.blogspot.com/2008/05/intro-to-rails-console.html . Additionally, if you want to directly call any methods you have defined in ~/hw4/bearplanner/app/controllers/bear_planner_controller.rb, you must first type the line: "include Helpers".
 
 ### More Background?
 Check out https://sites.google.com/a/cs.berkeley.edu/cs186-sp10/assignments/hw4-rails and scroll down to "Background on Ruby on Rails to learn more if you are still confused, or check out the links in our resources. 
