@@ -299,7 +299,7 @@ Since you created your own models you will need to plug them  into our views thr
   * Purpose: To create an event
     * If the form is submitted and all goes well redirect to "show_calendar" with params[:cal_id] set. 
     * Otherwise redirect to "create_event" with params[:notice] set to the string "An error has occurred." and params[:cal_id] set. And do not create the event. 
-    * If an invitee username is invalid (nonexistent, already invited, or the current user), change the event and invite the valid users and redirect to "show_calendar" but in addition to setting params[:cal_id] also set params[:notice] to the string "The following invited usernames are invalid/duplicates and invites were not sent:" followed by the invalid usernames (with a space between each one) 
+    * If an invitee username is invalid (nonexistent, already invited, or the current user), create the event and invite the valid users and redirect to "show_calendar" but in addition to setting params[:cal_id] also set params[:notice] to the string "The following invited usernames are invalid/duplicates and invites were not sent:" followed by the invalid usernames (with a space between each one) 
   * Input:
     * params[:cal_id] the calendar we were in when we clicked "create event" 
     * After the form is submitted:
