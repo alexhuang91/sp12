@@ -93,6 +93,18 @@ If you want to push your new changes to heroku you simply need to type the follo
     
 Locally, your changes with automatically appear as long as you rails server command is still running. 
 
+Note: If you would like to collaborate with your partner on the same heroku app, this is very straightforward. Simply have one of you partners follow the steps above then do:
+
+    % heroku sharing:add otherPartner@whatever.com
+    
+The the otherPartner (after performing heroku login) can execute:
+
+    % git clone -o heroku git@heroku.com:theirapp.git
+    
+theirapp is the name of the app you creating this will be the name that is something like "flying-dove-1234" or "shivering-pine-5678" something (in my working solution just "bearplanner")
+    
+And you will both have access to the app/git repo!! If you would like more info check out: http://devcenter.heroku.com/articles/sharing 
+
 ##Part I: Schema Design
 
 To begin, we will design the database schema for the app and create the appropriate Rails models. 
