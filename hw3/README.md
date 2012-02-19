@@ -240,9 +240,9 @@ Since you created your own models you will need to plug them  into our views thr
 #### edit_event
   * Purpose: To give the current information about an event and let a user edit it. (see signup and login for user input examples)
     * If the edit is submitted and all goes well redirect to "show_calendar" with params[:cal_id] set. 
-    * Otherwise redirect to "edit_event" with params[:notice] set to the string "An error has occurred." And do not change the event. 
+    * Otherwise redirect to "edit_event" with params[:notice] set to the string "An error has occurred." with params[:event_id] and params[:cal_id] set.  And do not change the event. 
     * If an invitee username is invalid (nonexistent, already invited, or the current user), change the event and invite the valid users and redirect to "show_calendar" but in addition to setting params[:cal_id] also set params[:notice] to the string "The following invited usernames are invalid/duplicates and invites were not sent:" followed by the invalid usernames (with a space between each one) 
-    * if you are not the owner of the event redirect to edit_event with the params[:notice] "You can not edit this event, contact owner: " followed by the owner of the event's name. 
+    * if you are not the owner of the event redirect to edit_event with the params[:notice] "You can not edit this event, contact owner: " followed by the owner of the event's name. Also set params[:cal_id] and params[:event_id] appropriately. 
   * Input:
     * params[:event_id] - An identifier of the event
     * params[:cal_id] - An identifier of the calendar to which the event belongs
@@ -298,9 +298,10 @@ Since you created your own models you will need to plug them  into our views thr
 #### create_event 
   * Purpose: To create an event
     * If the form is submitted and all goes well redirect to "show_calendar" with params[:cal_id] set. 
-    * Otherwise redirect to "create_event" with params[:notice] set to the string "An error has occurred." And do not create the event. 
+    * Otherwise redirect to "create_event" with params[:notice] set to the string "An error has occurred." and params[:cal_id] set. And do not create the event. 
     * If an invitee username is invalid (nonexistent, already invited, or the current user), change the event and invite the valid users and redirect to "show_calendar" but in addition to setting params[:cal_id] also set params[:notice] to the string "The following invited usernames are invalid/duplicates and invites were not sent:" followed by the invalid usernames (with a space between each one) 
   * Input:
+    * params[:cal_id] the calendar we were in when we clicked "create event" 
     * After the form is submitted:
       * params[:eventName] - The new event name
       * params[:starts_at] - New start time
