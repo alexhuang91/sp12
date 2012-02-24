@@ -22,7 +22,7 @@ In the rehaul of the calmail system UC Berkeley CIO Shel Waggener has hired you 
     + Invites can optionally have a message attached (same for all invited users)
     + If accepted the invitee assigns the event to a calendar in their account
     + Invites can be rejected by an invitee
-    + Users can not be sent a second invite if one is already pending for that event
+    + Users can not be sent a second invite if one is already pending for that event, or if the person is already attending
     + You can not invite yourself to an event
     + Only the event owner can send invites
   * Events and Calendars can be deleted
