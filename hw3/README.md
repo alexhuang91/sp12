@@ -327,7 +327,7 @@ Since you created your own models you will need to plug them  into our views thr
   * Purpose: Show all the pending (neither accepted or declined) invites for a user
   * Input: None
   * Output: 
-    * @allInvitees - An array of hashes of invites where each hash has the values:
+    * @allInvitees - An array of hashes of invites where each hash has the values: (note we are looking for the invites NOT the invitees, the variable was misnamed but please just leave it this way)
       * 'inviteId' - Identifier of the invite
       * 'eventName' - Name of the event invited to 
 
