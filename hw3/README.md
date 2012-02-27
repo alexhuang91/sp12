@@ -15,7 +15,7 @@ In the rehaul of the calmail system UC Berkeley CIO Shel Waggener has hired you 
   * Each user can create and view multiple calendars
     + Within the scope of a single user, calendar names are unique
     + Calendars must have a name, and can optionally have a description
-  * Calendar can holds multiple events
+  * Calendar can holds multiple events (i.e. events must belong to a calendar)
     + Events must have a name, start and end time
   * Events can have multiple users attending them
     + You can invite users to an event when you create it
