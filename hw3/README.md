@@ -261,8 +261,9 @@ Since you created your own models you will need to plug them  into our views thr
     * @eventStarts - DateTime with start of event
     * @eventEnds - DateTime with end of event
     * @eventOwner - Identifier of the owner of the event
-    * @invitees - Array of hashes of the current people who have accepted invites (this is only set if you are the event owner) 
+    * @invitees - Array of hashes of the current people who have accepted invites plus the owner (this is only set if you are the event owner) 
       * 'name' - Invitee's name
+      * NOTE: I realize this doesn't seem to make sense with the "currently inviting" label on the app, it should really say "currently attending" this is my fault. 
 
 #### create_calendar
   * Purpose: Allows user to create a calendar, info sent when request.post? is true
