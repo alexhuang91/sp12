@@ -72,7 +72,7 @@ To submit the code you will need to launch a heroku application with your app, y
 If you are running on an inst machine you must do the following steps (on a vm you can ignore this):
 
     % ssh-keygen -t rsa
-    % heroku add:keys
+    % heroku keys:add
 
 Enter your login info when prompted (that you used to sign up at heroku.com) and respond 'yes' when it asks to create a public key. 
 
@@ -101,7 +101,7 @@ The the otherPartner (after performing heroku login) can execute:
 
     % git clone -o heroku git@heroku.com:theirapp.git
     
-theirapp is the name of the app you creating this will be the name that is something like "flying-dove-1234" or "shivering-pine-5678" something (in my working solution just "bearplanner")
+theirapp is the name of the app you creating this will be the name that is something like "flying-dove-1234" or "shivering-pine-5678" something (in my working solution just "bearplanner"). If you get a publickey error at that point execute the ssh-keygen and heroku heys:add steps described above.
     
 And you will both have access to the app/git repo!! If you would like more info check out: http://devcenter.heroku.com/articles/sharing 
 
