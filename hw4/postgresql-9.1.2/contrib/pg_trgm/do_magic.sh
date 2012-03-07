@@ -44,5 +44,7 @@ fi
 
 # Wait for postgres to start up and then execute our query.
 sleep 2.5
-# FIXME: You may have to change the port below
-$HOME/pgsql/bin/psql -p 5430 postgres -c "$1"
+$HOME/pgsql/bin/psql postgres -c "$1"
+# FIXME: You may have to include the port in the line above if you had to specify it. 
+# For example, if you set the port to 5430, you would modify the line above to look like:
+# $HOME/pgsql/bin/psql -p 5430 postgres -c "$1"
