@@ -346,11 +346,11 @@ First, cd into the `contrib/pg_trgm` directory and make the `pg_trgm` module as 
 
 Then start the PostgreSQL server using the `pg_ctl` command:
 
-    $HOME/pgsql/bin/pg_ctl -D $HOME/pgsql/data start
+    $HOME/pgsql/bin/pg_ctl -D $HOME/pgsql/data -l log.txt start
     
 Connect to the `psql` prompt using:
 
-    $HOME/pgsql/bin/psql -p 5430 postgres
+    $HOME/pgsql/bin/psql -p <port> postgres
 
 and type:
 
