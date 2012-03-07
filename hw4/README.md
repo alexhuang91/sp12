@@ -68,7 +68,7 @@ The two functions of the `pg_trgm` module that we are primarily interested in ar
  
 More information about the `pg_trgm` module can be found here: http://www.postgresql.org/docs/9.1/static/pgtrgm.html
 
-***Note:*** Even though you are implement `q-grams` don't change the names of the functions like `show_trgm` and `generate_trgm`
+***Note:*** Even though you are implementing `q-grams` don't change the names of the functions like `show_trgm` and `generate_trgm`
 
 ***Note:*** The primary files that you need to modify are `trgm_op.c` and `trgm.h`
 
