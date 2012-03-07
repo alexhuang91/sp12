@@ -199,7 +199,7 @@ For example, the same query but now using q-gram matching with <b>q=3</b> as fol
 
 ***Note:*** You should remove all your debugging output before running this query - else it might take a while!!
 
-***Note:*** Remember to set q=3 and restart your PostgreSQL server using the command `export POSTGRES_Q_GRAM=3`; $HOME/pgsql/bin/pg_ctl restart
+***Note:*** Remember to set q=3 and restart your PostgreSQL server using the command `export POSTGRES_Q_GRAM=3`; `$HOME/pgsql/bin/pg_ctl restart`
 
     similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name, rp.name) > 0.7;
     count 
@@ -336,6 +336,7 @@ Port numbers between 1025 and 32768 should be usable.
 Then start your instance of PostgreSQL as usual and connect to the database using your specified port number.
 For example, if you changed it to 5430, you would use:
 
+    $HOME/pgsql/bin/pg_ctl -D data -p 5430 -l log.txt start
     $HOME/pgsql/bin/psql -p 5430 postgres
     
 ###Installing pg_trgm
