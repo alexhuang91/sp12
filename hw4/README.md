@@ -209,7 +209,7 @@ For example, the same query but now using q-gram matching with <b>q=3</b> as fol
 
 
 
-Here is the result from a sample query using <b>q=4</b> (Remember to change POSTGRES_Q_GRAM to 4!) to check your implementations. The query
+Here is the result from a sample query using <b>q=4</b> to check your implementations. (Remember to change POSTGRES_Q_GRAM to 4 and restart!) The query
 
 ```
 similarity=# select ra.name, rp.name, ra.address, rp.phone                                                                                                                        
@@ -264,8 +264,8 @@ and then submit using `submit hw4`
 
 ##Getting Started: Building PostgreSQL
 
-For this assignment, you will be modifiying a slightly modified version of the PostgreSQL 9.1.2 source code. 
-To follow these instructions you SHOULD use the virtual machine you downloaded for HW3. If you really donot want to use a VM, you can develop on the hive machines using you cs186-xx accounts too. Instructions on how to build on the inst machines have been denoted using an asterix (*)
+For this assignment, you will be modifiying a slightly simplified version of the PostgreSQL 9.1.2 source code. 
+To follow these instructions you SHOULD use the virtual machine you downloaded for HW3. If you really do not want to use a VM, you can develop on the hive machines using your cs186-xx accounts too. Instructions on how to build on the inst machines have been denoted using an asterix (*)
 
 #####Step 1
 To obtain the source code in your `cs186/sp12` repository that you previously cloned for `hw3` run 
@@ -288,15 +288,15 @@ Remember the password you need is `saasbook`
 After checking out the assignment, configure, compile and install PostgreSQL. We will configure PostgreSQL to be installed in the "pgsql" subdirectory of your VM's home directory:
 
     cd postgresql-9.1.2
-    ./configure --prefix=$HOME/pgsql
+    ./configure --prefix=$HOME/pgsql --enable-debug
     make
     make install
 
-***If installing Postgres on the hive machines in the previous step you should have configured Postgres using `--without-readline`. That is instead of `./configure --prefix=$HOME/pgsql` use `./configure --prefix=$HOME/pgsql --without-readline`
 
 ##### Step 4
 
 After building and installing Postgres, use the `initdb` command to initialize a local PostgreSQL database cluster.  This only has to be done once.
+***If installing Postgres on the hive machines in the previous step you should have configured Postgres using `--without-readline`. That is instead of `./configure --prefix=$HOME/pgsql` use `./configure --prefix=$HOME/pgsql --without-readline`
 
     $HOME/pgsql/bin/initdb -D $HOME/pgsql/data --locale=C
 
@@ -314,7 +314,7 @@ To shutdown the PostgreSQL server, you can also use the `pg_ctl` command:
 
 ### *Some inst machine details (Port conflicts)
 
-The server is accessed over TCP/IP using a unique port assigned to your `$PGPORT` environment variable, so it won't conflict with anyone else's server. 
+On the hive machines, the server is accessed over TCP/IP using a unique port assigned to your `$PGPORT` environment variable, so it won't conflict with anyone else's server. 
 Check the file `log.txt` immediately after launching for any error messages.
 
 If you see an error message like the following:
@@ -366,8 +366,7 @@ This will install the `pg_trgm` module in the `postgres` database.
 
 ***NOTE:*** If you create a new database, you must install the extension in that database too!
 
-***NOTE:*** After you have modified PostgreSQL source code, you should recompile and reinstall the modified version of PostgreSQL using the `make` and `make install` commands respectively.
-If you only modify the files in the `pg_trgm` module, you only need to run `make` and `make install` in the `pg_trgm` directory. You don't have to `CREATE EXTENSION` again. Neither do you have to recompile and reinstall the PostgreSQL `src` directory.
+***NOTE:*** After you modify the files in the `pg_trgm` module, you need to run `make` and `make install` in the `pg_trgm` directory. You don't have to `CREATE EXTENSION` again. Neither do you have to recompile and reinstall the PostgreSQL `src` directory.  *If for some reason you modify the core PostgreSQL source code--which we don't recommend!--you need to recompile and reinstall the modified version of PostgreSQL using the `make` and `make install` commands at the top level of the `postgresql-9.1.2` directory.*
 
 You can see see the existing trigram implementation in action by running the following query in the `psql` prompt:
 
@@ -385,52 +384,51 @@ You can see see the existing trigram implementation in action by running the fol
 
 For just recompiling and reinstalling the `pg_trgm` module, you can run `./do_magic.sh`
 
-The last line of the `do_magic.sh` script sets the port that it is going to set the PostgreSQL server on.
+***The last line of the `do_magic.sh` script sets the port that it is going to set the PostgreSQL server on.
 Please make sure that it is consistent with your chosen port above
 
 ##Coding Tips
 ####Hints
 
-* With the introduction of the new rules, you now have variable sized `q-grams` It might be a good idea to have all the `q-grams` be of the same length and pad the extra space at the end with whitespaces. This will make the pointer arithmetic in your C code much easier
+*  With the introduction of the new rules, you now have `q-grams` of different lengths. It might be simpler in your C code to represent all these `q-grams` using the same number of bytes anyhow: you can pad any extra space at the end of the q-gram with the character '\0' to indicate end-of-string in C. This will make the pointer arithmetic in your C code much easier.
 
-* Since the largest `q-gram` is q+1 characters big, a suggestion is that you have all q-grams be `q+2` characters long with the last character in the `q-gram` representing whether this particular `g-gram` is a "normal" q-gram with q characters, whether it is a "special" q-gram with q+1 characters (i.e. with a '!' at the end of it) or if it is a "special" q-gram with a "#" after the first character
+* Since the largest `q-gram` is q+1 characters big, a suggestion is that you have all q-grams be `q+1` characters long.  The last character will represent whether this is a "normal" q-gram (last character is '\0'), a "long" q-gram (last character is '!') or a "short" q-gram (2 non-null characters--the first character followed by "#\0\0").
 
-* Note that the `trgm` character array defined statically to have size 3 in `trgm.h` will now have be changed into a pointer (since we don't know the value of `q` at compile time.
+* Note that the `trgm` character array is defined statically to have size 3 in `trgm.h`.  To adapt this to work on arbitrary values of `q`, this will have be changed into a pointer to a string since we don't know the value of `q` at compile time.
 
 ####Notes about PostgreSQL
 
-* When allocating memory, use the Postgres routines `palloc` and `pfree` instead of the corresponding C library routines `malloc` and `free`. The memory allocated by palloc will be freed automatically at the end of each transaction, preventing some types of memory leaks. This is because PostgreSQL allocates memory within `memory contexts`. More information can be found here: http://www.postgresql.org/docs/8.3/static/spi-memory.html
+* Postgres implements [region-based memory](http://en.wikipedia.org/wiki/Region-based_memory_management) for efficient memory management. When allocating memory, you *must* use the Postgres routines `palloc` and `pfree` instead of the corresponding C library routines `malloc` and `free`. Note also the convenience routine `palloc0`, which allocates a run of memory and sets it to all 0's ('\0'). The memory allocated by palloc and palloc0 will be freed automatically at the end of each transaction, preventing some types of memory leaks in a very efficient manner. This is because PostgreSQL allocates memory within `memory contexts`. More information can be found here: [http://www.postgresql.org/docs/9.1/static/spi-memory.html](http://www.postgresql.org/docs/9.1/static/spi-memory.html)
 
-* In `trgm.h` you may also be confused by the definition of the `TRGM` struct. This struct is a variable sized datatype. To support this variable-length (varlena) representation, the first 32-bit word of any stored value contains the total length of the value in bytes (including itself). More information can be found here: http://www.postgresql.org/docs/9.0/static/storage-toast.html
+* In `trgm.h` you may also be confused by the definition of the `TRGM` struct. This struct is a variable sized datatype. To support this variable-length (varlena) representation, the first 32-bit word of any stored value contains the total length of the value in bytes (including itself).
 
 ####Debugging
 
 #####Using elog()
 
-You can add `elog()` statements at any point to output a message to the log file, using the same syntax as printf():
+You can add `elog()` statements at any point to output a message to the psql client, using the same syntax as printf():
 
-    elog(LOG, "Two plus three is %d", 2+3);
+    elog(NOTICE, "Two plus three is %d", 2+3);
     
 We have also provided you with `print_qgram` and `print_qgram_array` helper functions in `trgm_op.c`. You can use them to see how your q-grams are being stored in memory. Feel free to modify them to provide prettier output!
 
 #####Using gdb
 
-To debug PostgreSQL using `gdb`, first start the server and connect to it using psql. Next, in a separate shell window, you first to determine the PID of the backend process. The simplest way to do this is to locate the `postgres` process with the most recent start time in the output of ps:
+To debug PostgreSQL using `gdb`, first start the server and connect to it using psql. Next, in a separate shell window, you first to determine the PID of the backend process. The simplest way to do this is to find the `postgres` process ID from the `psql` prompt:
 
 ```
-ps -f -u $USER | egrep /+postgres | sort -r -k 26
-cs186-ek  2347  2304   0 23:48:55 ?           0:00 ./bin/postgres -D data
-cs186-ek  2309  2304   0 23:42:11 ?           0:00 ./bin/postgres -D data
-cs186-ek  2308  2304   0 23:42:11 ?           0:00 ./bin/postgres -D data
-cs186-ek  2307  2304   0 23:42:11 ?           0:00 ./bin/postgres -D data
-cs186-ek  2306  2304   0 23:42:11 ?           0:00 ./bin/postgres -D data
-cs186-ek  2304 11960   0 23:42:11 pts/14      0:00 ./bin/postgres -D data
+postgres=# select pg_backend_pid();
+ pg_backend_pid 
+----------------
+          72150
+(1 row)
 ```
 
-Next, grab the PID of the process, which is the first numeric column in the output of ps. Attach to the backend `postgres` process using gdb:
+Next, grab that PID and attach to the backend `postgres` process using gdb:
 
 ```
-gdb ~/pgsql/bin/postgres 2347
+gdb ~/pgsql/bin/postgres 72150
+
 ```
 
 Once gdb has attached to the backend process, you might want to set a `breakpoint` inside the code, and then use the `continue` command to resume the execution of the backend process. For example:
