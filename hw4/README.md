@@ -239,6 +239,10 @@ The entire result of the following query for <b>q=5</b> has been provided in the
 
 The solution file has also been provided with the skeleton source code. Compare your results with the provided file by using the command `diff 5.txt ~/sp12/hw4/solution_5.txt`
 
+##Need more help?
+
+Check the [FAQ page](https://github.com/cs186/sp12/blob/master/hw4/FAQ.md)
+
 ##What to turn in
 
 Repeat the same query that you ran above (for q=5) for q=2,3,4 and 6 storing the results in `2.txt`, `3.txt`, `4.txt` and `6.txt` respectively
