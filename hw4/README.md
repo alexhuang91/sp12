@@ -36,10 +36,11 @@ In this assignment, we will be modifying this to extend it to *q-grams*: runs of
 
 Your task is to extend the given trigram code to q-grams using the following rules:
 
-* Remove any padding from the strings
-* If the length of the string is less than the given value for `q`, return that string as a q-gram. In this event, there is no need to implement the two new rules we are introducing below
-* We will introduce two new rules:
-   + The first trigram produced from each term is marked at the right end by the addition of the symbol `!' 
+1. Remove any padding from the terms
+2. If the length of a term is less than the given value for `q`, return that 
+term as a q-gram. In this event, there is no need to implement the two new rules we are introducing below
+3. We introduce two new rules:
+   + The first q-gram from each term is added twice -- once as a q-gram, and once as a (q+1)-gram containing the first q characters of the term with the symbol `!' appended to the right.
    + The first letter of the term is marked by adding the character `#' to the right
 
 * You may assume that the input will be entirely ASCII characters
@@ -56,8 +57,8 @@ The two functions of the `pg_trgm` module that we are primarily interested in ar
     <td><tt>similarity(text, text)</tt></td>
     <td><tt>real</tt></td>
     <td>
-        Returns a number that indicates how similar the two arguments are. 
-        The range of the result is zero (indicating that the two strings are completely dissimilar) to one (indicating that the two strings are identical).
+        Returns a number between 0 and 1 that indicates how similar the two arguments are. 
+        Zero indicates that the two strings are completely dissimilar, 1 that they are identical.
     </td>
   </tr>
   <tr>
@@ -67,7 +68,7 @@ The two functions of the `pg_trgm` module that we are primarily interested in ar
   </tr>
 </table>
  
-More information about the `pg_trgm` module can be found here: http://www.postgresql.org/docs/9.1/static/pgtrgm.html
+More information about the `pg_trgm` module can be found here: [http://www.postgresql.org/docs/9.1/static/pgtrgm.html](http://www.postgresql.org/docs/9.1/static/pgtrgm.html)
 
 ***Note:*** Even though you are implementing `q-grams` don't change the names of the functions like `show_trgm` and `generate_trgm`
 
@@ -140,7 +141,7 @@ So, you could have something like the following in your header file:
 #define q_str getenv("POSTGRES_Q_GRAM")
 #define q ((q_str == NULL || q_str[0] == '\0') ? 3 : atoi(q_str))
 ````
-More information on the `getenv` can be found here: http://www.cplusplus.com/reference/clibrary/cstdlib/getenv/
+More information on the `getenv` can be found here: [http://www.cplusplus.com/reference/clibrary/cstdlib/getenv/](http://www.cplusplus.com/reference/clibrary/cstdlib/getenv/)
 
 ##Testing
 
@@ -198,7 +199,7 @@ For example, the same query but now using q-gram matching with <b>q=3</b> as fol
 
 ***Note:*** You should remove all your debugging output before running this query - else it might take a while!!
 
-***Note:*** Remeber to set q=3 before starting your PostgreSQL server using the command `export POSTGRES_Q_GRAM=3`
+***Note:*** Remember to set q=3 and restart your PostgreSQL server using the command `export POSTGRES_Q_GRAM=3`; $HOME/pgsql/bin/pg_ctl restart
 
     similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name, rp.name) > 0.7;
     count 
