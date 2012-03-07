@@ -149,7 +149,7 @@ Create a new database `similarity` and import the data with these commands:
 
 After starting your PostgreSQL server, type the following:
     
-    $ bin/psql -p <port> similarity
+    $ ~/pgsql/bin/psql -p <port> similarity
     similarity=# CREATE EXTENSION pg_trgm;
     
 You can check the data using the "psql" command-line client:
