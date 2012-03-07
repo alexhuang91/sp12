@@ -312,7 +312,7 @@ To shutdown the PostgreSQL server, you can also use the `pg_ctl` command:
     
     $HOME/pgsql/bin/pg_ctl -D $HOME/pgsql/data stop
 
-### *Some inst machine details (Port conflicts)
+### Port conflicts
 
 On the hive machines, the server is accessed over TCP/IP using a unique port assigned to your `$PGPORT` environment variable, so it won't conflict with anyone else's server. 
 Check the file `log.txt` immediately after launching for any error messages.
