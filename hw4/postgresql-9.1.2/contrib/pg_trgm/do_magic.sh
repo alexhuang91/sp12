@@ -4,6 +4,7 @@
 # For just recompile & restart: ./do_magic.sh
 
 # Compile!
+make clean
 make 2>&1 | tee make_output.tmp # eff bash
 
 # Error checking
