@@ -296,7 +296,7 @@ After building and installing Postgres, use the `initdb` command to initialize a
 
 Next, start PostgreSQL server:
     
-    $HOME/pgsql/bin/pg_ctl start -D $HOME/pgsql/data -l log.txt
+    $HOME/pgsql/bin/pg_ctl -D $HOME/pgsql/data -l log.txt start
 
 This will start the server running in the background, logging any log messages such as errors to `log.txt` 
 
@@ -339,7 +339,7 @@ We will be modifying this to extend it to `q-grams`
 
 But, first we want to make and load the `pg_trgm` module as an extension. This is done as follows:
 
-First, cd into the `contrib/pg_trgm` directory and make the `pg_trgm` module as follows:
+First, cd into the `postgresql-9.1.2/contrib/pg_trgm` directory and make the `pg_trgm` module as follows:
     
     make
     make install
