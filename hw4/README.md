@@ -125,7 +125,11 @@ We will be setting `q` dynamically as an environment variable called `POSTGRES_Q
 To set this environment variable to your choice of `q` run the following command before starting the PostgreSQL server:
 
     $ export POSTGRES_Q_GRAM=q
-    
+
+If PostgreSQL was already running, you'll need to restart it to pick up the new value of that variable:
+
+    $ $HOME/pgsql/bin/pg_ctl restart
+
 To get the C string containing the value of the environment variable use the `getenv` function.
 To then extract the value of `q` as an int use `atoi`
 
