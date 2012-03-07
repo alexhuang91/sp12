@@ -18,15 +18,16 @@ and we have a record in relation B:
     | Address                        | Phone          |
     | 123 Durant Avenue Berkeley, CA | (510) 123-4567 |
 
-and we wish to join them on the address field.  We could try using `A.Address = B.Address` but that would never match, and we would never be able to match the two records. 
-However, if the addresses were `similar` enough, they could be joined. 
-Similarity joins use similarity calculations to determine whether records should be matched. 
+and we wish to join them on the address field.  We could try using `A.Address = B.Address` but that would never match via string equality. We'd like to be able join the addresses if they are `similar` enough. 
+Similarity joins use similarity calculations to determine whether records can be matched.
 
 ###Trigrams
 
-The source code of Postgresql-9.1.2 comes with trigrams. The `pg_trgm` module provides functions and operators for determining the similarity of ASCII alphanumeric text based on trigram matching. A `trigram` is a group of three consecutive characters taken from a string. We can measure the similarity of two strings by counting the number of trigrams they share. This simple idea turns out to be very effective for measuring the similarity of words in many natural languages.
+The source code of Postgresql-9.1.2 comes with trigrams. The `pg_trgm` module provides functions and operators for determining the similarity of ASCII alphanumeric text based on trigram matching. 
 
-In the existing source code, a string is considered to have two spaces prefixed and one space suffixed when determining the set of trigrams contained in the string. 
+A `trigram` is a group of three consecutive characters taken from a string. We can measure the similarity of two strings by counting the number of trigrams they share. This simple idea turns out to be very effective for measuring the similarity of words in many natural languages.
+
+In the existing source code, a string is split into "terms" (words) on the space character.  When determining the set of trigrams contained in the string, each term is considered to have two spaces before it, and one space after it.
 For example, the set of trigrams in the string `cat` is <code>"&nbsp;&nbsp;c", " ca", "cat", and "at "</code>
 
 In this assignment, we will be modifying this to extend it to *q-grams*: runs of *q* characters for arbitrary *q*.  (Trigrams are a special case where *q*=3).
@@ -438,3 +439,5 @@ Once gdb has attached to the backend process, you might want to set a `breakpoin
 (gdb) break trgm_op.c:<line number> 
 (gdb) continue
 ```
+
+There are some tutorial screencast on using gdb with postgres at [this location](http://www.cs186berkeley.net/sp09/wiki/DebuggingTutorials).  They are old, but should still be useful.
