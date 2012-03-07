@@ -24,6 +24,7 @@ In addition to doing the above mentioned tasks, this script also helps by provid
 ###psql: could not connect to server: No such file or directory. Is the server running locally and accepting connections on Unix domain socket "/tmp/.s.PGSQL.5000"?
 
 Please read the "Getting Started: Building PostgreSQL" section. If your postgres isn't starting up on the default port, you'll have to read the "Port conflicts" section. If you have had to modify your port as described in that section, then make sure that when starting your server and the psql prompt you specify the port you set. For example, if you had to modify your port to 5430, then you should start your server and connect to the psql command line client as follows:
+
 ```
 $HOME/pgsql/bin/pg_ctl -D data -p 5430 -l log.txt start
 $HOME/pgsql/bin/psql -p 5430 postgres
