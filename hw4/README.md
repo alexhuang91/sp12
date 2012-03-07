@@ -1,7 +1,7 @@
 # Homework 4: Similarity joins using q-grams
 ### CS186, UC Berkeley, Spring 2012
 ### Points: [5% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
-### Due: Tuesday, March 13, 2012, 11:59:59 PM (Note: This is a one-week project. Get started early!)
+### Due: Thursday, March 15, 2012, 11:59:59 PM (Note: This is a one-week project. Get started early!)
 ### Note: *This homework is to be done in pairs! Pair-programming is highly recommended!*
 
 ###Motivation
