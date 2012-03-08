@@ -338,7 +338,7 @@ Port numbers between 1025 and 32768 should be usable.
 Then start your instance of PostgreSQL as usual and connect to the database using your specified port number.
 For example, if you changed it to 5430, you would use:
 
-    $HOME/pgsql/bin/pg_ctl -D data -l log.txt start
+    $HOME/pgsql/bin/pg_ctl -D $HOME/pgsql/data -l log.txt start
     $HOME/pgsql/bin/psql -p 5430 postgres
     
 ###Installing pg_trgm
