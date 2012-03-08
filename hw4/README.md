@@ -294,12 +294,11 @@ After checking out the assignment, configure, compile and install PostgreSQL. We
     make
     make install
 
+***If installing Postgres on the hive machines in the previous step you should have configured Postgres using `--without-readline`. That is instead of `./configure --prefix=$HOME/pgsql --enable-debug` use `./configure --prefix=$HOME/pgsql --enable-debug --without-readline`
 
 ##### Step 4
 
 After building and installing Postgres, use the `initdb` command to initialize a local PostgreSQL database cluster.  This only has to be done once.
-
-***If installing Postgres on the hive machines in the previous step you should have configured Postgres using `--without-readline`. That is instead of `./configure --prefix=$HOME/pgsql --enable-debug` use `./configure --prefix=$HOME/pgsql --enable-debug --without-readline`
 
     $HOME/pgsql/bin/initdb -D $HOME/pgsql/data --locale=C
 
