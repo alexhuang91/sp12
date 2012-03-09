@@ -417,6 +417,21 @@ We have also provided you with `print_qgram` and `print_qgram_array` helper func
 
 #####Using gdb
 
+**3/8/12: To get gdb working nicely, you will need to do redo the build process for PostgreSQL to turn off compiler optimizations.  The magic incantation looks like this:**
+
+    export CFLAGS=-g
+    cd postgresql-9.1.2
+    ./configure --prefix=$HOME/pgsql --enable-debug --without-readline
+    make clean
+    make
+    make install
+    cd contrib/pg_trgm
+    make clean
+    make
+    make install
+
+**Now you should be all set to use the following instructions.**
+
 To debug PostgreSQL using `gdb`, first start the server and connect to it using psql. Next, in a separate shell window, you first to determine the PID of the backend process. The simplest way to do this is to find the `postgres` process ID from the `psql` prompt:
 
 ```
