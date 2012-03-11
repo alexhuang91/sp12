@@ -245,6 +245,14 @@ The entire result of the following query for <b>q=5</b> has been provided in the
 
 The solution file has also been provided with the skeleton source code. Compare your results with the provided file by using the command `diff 5.txt ~/sp12/hw4/solution_5.txt`
 
+***Note:*** <font color="red">You may have to sort your output and the solution file before diff'ing them. For example you might have to:</font>
+
+```
+sort solution_5.txt > sorted_solution_5.txt
+sort 5.txt > sorted_5.txt
+diff sorted_5.txt sorted_solution_5.txt
+```
+
 ##Need more help?
 
 Check the [FAQ page](https://github.com/cs186/sp12/blob/master/hw4/FAQ.md)
