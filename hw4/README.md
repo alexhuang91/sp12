@@ -236,7 +236,7 @@ gives this output
 
 The entire result of the following query for <b>q=5</b> has been provided in the file - [solution_5.txt](https://github.com/anirudhtodi/CS186-Private/blob/master/hw4/solution_5.txt)
 
-    bin/psql similarity -c "SELECT show_trgm(ra.address), show_trgm(ap.address),
+    bin/psql -p <port> similarity -c "SELECT show_trgm(ra.address), show_trgm(ap.address),
                                    similarity (ra.address, ap.address), ra.address, 
                                    ap.address
                             FROM restaurantaddress ra, addressphone ap
