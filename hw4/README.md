@@ -259,7 +259,34 @@ Check the [FAQ page](https://github.com/cs186/sp12/blob/master/hw4/FAQ.md)
 
 ##What to turn in
 
-Repeat the same query that you ran above (for q=5) for q=2,3,4 and 6 storing the results in `2.txt`, `3.txt`, `4.txt` and `6.txt` respectively
+Repeat the same query that you ran above (for q=5) for q=2,3,4 and 6 storing the results in `2.txt`, `3.txt`, `4.txt` and `6.txt` respectively. You can check the size of the files by running: `wc 2.txt` for example and compare your results to the table below:
+
+<table>
+  <tr>
+    <th>Value of q</th>
+    <th>Results of word count</th>
+  </tr>
+  <tr>
+    <td>q = 2</td>
+    <td>   329   5463 135414 2.txt</td>
+  </tr>
+    <tr>
+    <td>q = 3</td>
+    <td>   277    4597  123363 3.txt</td>
+  </tr>
+  <tr>
+    <td>q = 4</td>
+    <td>      266   4420 118717 4.txt</td>
+  </tr>
+  <tr>
+    <td>q = 5</td>
+    <td>    292   4844 128572 5.txt</td>
+  </tr>
+  <tr>
+    <td>q = 6</td>
+    <td>      313   5167 137204 6.txt</td>
+  </tr>
+</table>
 
 Submit the following:
 
