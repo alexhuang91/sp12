@@ -210,9 +210,9 @@ For example, the same query but now using q-gram matching with <b>q=3</b> as fol
 You can check the results of the above query by running:
 
 ```
-$HOME/pgsql/bin/psql -p <port> -c "SELECT show_trgm(ra.name), show_trgm(rp.name), similarity(ra.name, rp.name) 
-                                   FROM restaurantaddress ra, restaurantphone rp 
-                                   WHERE similarity(ra.name, rp.name) > 0.7;" > similarity_check.txt
+$HOME/pgsql/bin/psql -p <port> similarity -c "SELECT show_trgm(ra.name), show_trgm(rp.name), similarity(ra.name, rp.name) 
+                                              FROM restaurantaddress ra, restaurantphone rp 
+                                              WHERE similarity(ra.name, rp.name) > 0.7;" > similarity_check.txt
 ```
 
 You can diff your result from the above query with the solution provided in the file `solution_similarity_check.txt` by using the command: `diff ~/sp12/hw4/solution_similarity_check.txt similarity_check.txt`
