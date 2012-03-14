@@ -207,9 +207,17 @@ For example, the same query but now using q-gram matching with <b>q=3</b> as fol
     500
     (1 row)
 
+You can check the results of the above query by running:
 
+```
+$HOME/pgsql/bin/psql -p <port> -c "SELECT show_trgm(ra.name), show_trgm(rp.name), similarity(ra.name, rp.name) 
+                                   FROM restaurantaddress ra, restaurantphone rp 
+                                   WHERE similarity(ra.name, rp.name) > 0.7;" > similarity_check.txt
+```
 
-Here is the result from a sample query using <b>q=4</b> to check your implementations. (Remember to change POSTGRES_Q_GRAM to 4 and restart!) The query
+You can diff your result from the above query with the solution provided in the file `solution_similarity_check.txt` by using the command: `diff ~/sp12/hw4/solution_similarity_check.txt similarity_check.txt`
+
+Here is the result from another sample query using <b>q=4</b> to check your implementations. (Remember to change POSTGRES_Q_GRAM to 4 and restart!) The query
 
 ```
 similarity=# select ra.name, rp.name, ra.address, rp.phone                                                                                                                        
@@ -236,7 +244,7 @@ gives this output
 
 The entire result of the following query for <b>q=5</b> has been provided in the file - [solution_5.txt](https://github.com/anirudhtodi/CS186-Private/blob/master/hw4/solution_5.txt)
 
-    bin/psql -p <port> similarity -c "SELECT show_trgm(ra.address), show_trgm(ap.address),
+    $HOME/pgsql/bin/psql -p <port> similarity -c "SELECT show_trgm(ra.address), show_trgm(ap.address),
                                    similarity (ra.address, ap.address), ra.address, 
                                    ap.address
                             FROM restaurantaddress ra, addressphone ap
