@@ -1481,7 +1481,6 @@ typedef struct SimJoinState {
  */
 typedef struct NestLoopState
 {
-        /** General NestLoop stuff (feel free to reuse these variables for SimLoop) */
 	JoinState	js;
 	bool		nl_NeedNewOuter;
         bool            nl_MatchedOuter;

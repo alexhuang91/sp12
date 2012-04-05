@@ -22,13 +22,13 @@
 #include "catalog/namespace.h"
 
 /*
- * Similarity threshold: [0, 1). 
+ * Similarity threshold: [0, 1).
  * Your code should accept any (inner ; outer) tuple pairs that have
  * a trigram similarity strictly > THRESH.
  */
 #define THRESH trgm_limit
 
-/* 
+/*
  * Use this to repopulate the innerTupleSlot with the given MinimalTuple.
  * This is great to call before returning the result, because ExecProject
  * requires that both the econtext->outerTupleSlot and econtext->innerTupleSlot
@@ -123,7 +123,7 @@ ExecReScanSimJoin(SimJoinState *node)
  * Returns the value of the join column in the given TupleTableSlot.
  * (E.g., if you're joining on "name % address", this will return the
  *  actual string value of the name for the outer tuple and address for the inner.)
- *  
+ *
  * We're assuming you're joining on two strings.
  * Use isInner to specify if the given slot contains an inner tuple or outer tuple.
  */
