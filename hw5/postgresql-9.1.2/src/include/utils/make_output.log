@@ -1,0 +1,4 @@
+trgm_op.c: In function ‘make_trigrams’:
+trgm_op.c:226:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ic -I. -I. -I../../src/include -D_GNU_SOURCE   -c -o trgm_op.o trgm_op.c
+gcc -O2 -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Wendif-labels -Wformat-security -fno-strict-aliasing -fwrapv -fpic -shared -o pg_trgm.so trgm_op.o -L../../src/port -Wl,--as-needed -Wl,-rpath,'/home/saasbook/pgsql/lib',--enable-new-dtags  

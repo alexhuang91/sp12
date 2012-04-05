@@ -1,0 +1,504 @@
+                      name                       |                      name                       
+-------------------------------------------------+-------------------------------------------------
+ Cibo Restaurant                                 | 1515 Restaurant
+ Cole' Restaurant                                | 1515 Restaurant
+ B Restaurant                                    | 1515 Restaurant
+ 1515 Restaurant                                 | 1515 Restaurant
+ 21c Museum Hotel - Liuisville                   | 21c Museum Hotel - Louisville
+ 2900                                            | 2900
+ 42nd Street Oyster Bar & Seafood Grill          | 42nd Streety Oystwr Bar & Seafopod Grill
+ 66 Dinew                                        | 66 Dinee
+ Acapulco Restaurnt                              | Acapulco Restaranbt
+ Acapulco Mexican Restaurant                     | Acapuoco Mexican Restauran
+ Amelias Mexican Restaurant                      | Acapuoco Mexican Restauran
+ Aztec Mexican Restaurants                       | Acapuoco Mexican Restauran
+ Acenar Restaurant                               | Acenar Restaurant
+ Acme Oyster House                               | Acme Oysxtyer House
+ Agave Restaurant                                | Acorn Restaurant
+ Akbar Restaurant                                | Acorn Restaurant
+ Acropolis Gree Tavern                           | Acropolis Greek Tavern
+ Actors Theatre of Louisville                    | Actors Theatre of Louisville
+ Adagia Resaurantr                               | Adagia Restaurant
+ Agave Restaurant                                | Agave Restaurat
+ A J Gator Sprts Bar & Grill                     | A J Gators Soots Bar & Grill
+ Agave Restaurant                                | Akbar Restaurant
+ Akbar Restaurant                                | Akbar Restaurant
+ Akira Sushi Bar and Japanese Restaurant         | Akira Sushi Bar and Japanese Restaurant
+ Alan Won's Restaurant                           | Alan Wong' Restaqurany
+ Alerto's Cantina                                | Alberto's Cantina
+ Alexander Michael's                             | Aldxander Michael's
+ Ali Baba Restaurant                             | Ali Baba Rstaurant
+ Allyn's Cafd                                    | Allyn's Cafe
+ Alma de Cuba                                    | Alma dd Cuba
+ Agave Restaurant                                | Amada Restaurant
+ Akbar Restaurant                                | Amada Restaurant
+ Ambwr Idia Restaurant                           | Ambar India Restaurant
+ Chelinos Mexican Restaurant                     | Amelias Mexican Restaurant
+ Acapulco Mexican Restaurant                     | Amelias Mexican Restaurant
+ Amelias Mexican Restaurant                      | Amelias Mexican Restaurant
+ Aztec Mexican Restaurants                       | Amelias Mexican Restaurant
+ Baja Mexican Restaurant                         | Amelias Mexican Restaurant
+ Amici's East Coast Pizzeria                     | Amici's East Coast Pizxeria
+ Agave Restaurant                                | Amiya Restaurant
+ Akbar Restaurant                                | Amiya Restaurant
+ Amura Jzpanese Restaurant                       | Amura Jpanese Restaurant
+ Anchor Bar                                      | Anchor Bar
+ Anchos Southwest Grill & Bar                    | Anchos Southwes Grilolo & Bqr
+ Andina Retaurant                                | Andina Restauran
+ Angewlina Itlian Bistro                         | Angelina Italian Bistro
+ Angelfish Japanese Restaurant                   | Angelish Japanese Restaurant
+ Angelo's Barbecue                               | Angelo's Barbecuye
+ Anaheim White House                             | Anmaheim White House
+ Agenda Restaurant & Lounge                      | Anthont's Restaurant & Lounge
+ Anbthonyu' Restaurant & Lounge                  | Anthont's Restaurant & Lounge
+ Anhthony's Restaurant & Lounge                  | Anthont's Restaurant & Lounge
+ Anthin's Fish Grotto                            | Anthony's Fish Grotto
+ Antoine's Restaurnt                             | Antome's Restaurant
+ Anzio Landing Italian Restauyrant               | Anzio Landing Italian Restaurant
+ Aladdins Eatery                                 | Aoaddins Eatery
+ Applebee's Neighborhood Grill                   | Applebee's Neghborhood Grill
+ Applebee's Neighborhood Grill                   | Applebee's Neghborhood Grill
+ Applebee's Neighborhoopd Grill                  | Applebee's Neghborhood Grill
+ Applebee's Nrighborhoiod Grill                  | Applebee's Neghborhood Grill
+ Applebee's Neighborhood Restaurant              | Applebee's Neibhborhood Resdturant
+ Aplebee's Neighborhood Grikll                   | Applebee's Neighborhood Grill
+ Applebee's Neighborhood Grill                   | Applebee's Neighborhood Grill
+ Applebee's Neighborhood Grill                   | Applebee's Neighborhood Grill
+ Applebee's Neighborhoopd Grill                  | Applebee's Neighborhood Grill
+ Applebee's Neighbprhpod Grill                   | Applebee's Neighborhood Grill
+ Applebee's Nrighborhoiod Grill                  | Applebee's Neighborhood Grill
+ Applebee's Neighborhood Grill                   | Applebee's Neighbryood Grioll
+ Applebee's Neighborhood Grill                   | Applebee's Neighbryood Grioll
+ Aplebee's Neighborhood Grikll                   | Applebee's Nighborhood Grikl
+ Applebee's Neighborhood Grill                   | Applebee's Nighborhood Grikl
+ Applebee's Neighborhood Grill                   | Applebee's Nighborhood Grikl
+ Applebee's Neighborhoopd Grill                  | Applebee's Nighborhood Grikl
+ Applebee's Nrighborhoiod Grill                  | Applebee's Nighborhood Grikl
+ Applebee's Neighborhood Grill                   | Applebre'a Neighboroold Grill
+ Applebee's Neighborhood Grill                   | Applebre'a Neighboroold Grill
+ Applebee's Neighborhoopd Grill                  | Applebre'a Neighboroold Grill
+ Applebee's Neighborhood Grill                   | Apploebee's Neighbprhood Grill
+ Applebee's Neighborhood Grill                   | Apploebee's Neighbprhood Grill
+ Applebee's Neighborhoopd Grill                  | Apploebee's Neighbprhood Grill
+ Applebee's Neighbprhpod Grill                   | Apploebee's Neighbprhood Grill
+ Cibo Restaurant                                 | Aria Restaurant
+ Cole' Restaurant                                | Aria Restaurant
+ B Restaurant                                    | Aria Restaurant
+ 1515 Restaurant                                 | Aria Restaurant
+ Agave Restaurant                                | Aria Restaurant
+ Akbar Restaurant                                | Aria Restaurant
+ Aria Restaurfant                                | Aria Restaurant
+ Artista Restaurant                              | Artiusta Restaurant
+ Asian Noodle Bar                                | Asian Noodle Bar
+ Atlantgis Steakhous                             | Atlantis Steakhouse
+ At Last Caf - JM Chef Catering                  | At Last Caf - JM Chef Catering
+ A Touch of European Cafe                        | A Touch of European Cafe
+ Arya Global Cuisine                             | Atya Global Cuisine
+ August Moon Chinese Bistro                      | Augusy Moon Chinese Bistro
+ Avanti Fountain Place                           | Avanti Foiuntain Place
+ Aztec Mexican Restaurants                       | Azteca Mexican Restsuants
+ Azuca Nuevo Latino,. Rextaurant and Bar         | Azuca Nuevo Latino, Restaurant and Bar
+ Axzurro Pizza                                   | Azzurro Pizza
+ Bacchus Wine Bar & Restaurant                   | Bacchus Wine Bar & Restaurant
+ Back Street Restaurant                          | Bacfk Street Restaurant
+ Bahama Breeze                                   | Bahama Breze
+ Baja Fresh Mexican Gill                         | Baja Fresh Mexican Grill
+ Amelias Mexican Restaurant                      | Baja Mexican Restaurant
+ Aztec Mexican Restaurants                       | Baja Mexican Restaurant
+ Baja Mexican Restaurant                         | Baja Mexican Restaurant
+ Bakers Square Restaqurant & Pie                 | Bakers Square Resgaurant & Pie
+ Bally's Las Vegas Hotel & Casino                | Ba;ly'd Las Vegas Hotel & Casino
+ Bandung Indonesian Restaurant                   | Bandung Indojesiaxn Restaurat
+ Bangkok Bay Thai Cuisine                        | Bangkok Bay Thai Cuisinme
+ Bangkok Thai Express Restaurant                 | Bangkok Thsi Explress Restaurant
+ Barking Crab Reswtaurant                        | Barking Cravv Restaurant
+ Barracuda Japanese Restaurant                   | Barracuda Japanese Restaurant
+ Basxi Italia                                    | Basi Italia
+ Bqwque Restayrant-Santa F Basque Restaurant     | Basque Restaurant-Santa Fe Basque Restaurant
+ Baxter Station                                  | Baxter Station
+ Bayleaf Restaurant                              | Bayleaf Restaurant
+ Beartooth Theatre Pub & Grill                   | Beartooth Theate Puyb & Grill
+ Bella Vista Restaurant                          | Bella Mia Restaurant
+ Benihana Japanese Seakhouse                     | Benhana Japanes Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benhana Japanes Steakhouse
+ Benihana Japanese Steakhouse                    | Benhana Japanes Steakhouse
+ Benihana Japanese Steakhouse                    | Benhana Japanes Steakhouse
+ Benihana Japanese Steakyouse                    | Benhana Japanes Steakhouse
+ Benihana Japanese Seakhouse                     | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakyouse                    | Benihana Japanese Steakhouse
+ Bernihana Japanerse Steakhouse                  | Benihana Japanese Steakhouse
+ Benihana Japanese Seakhouse                     | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakyouse                    | Benihana Japanese Steakhouse
+ Bernihana Japanerse Steakhouse                  | Benihana Japanese Steakhouse
+ Benihana Japanese Seakhouse                     | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakyouse                    | Benihana Japanese Steakhouse
+ Bernihana Japanerse Steakhouse                  | Benihana Japanese Steakhouse
+ Benihana Japanese Seakhouse                     | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihana Japanese Steakhouse
+ Benihana Japanese Steakyouse                    | Benihana Japanese Steakhouse
+ Bernihana Japanerse Steakhouse                  | Benihana Japanese Steakhouse
+ Benihana Japanese Seakhouse                     | Benihan Japanese Steakhouse
+ Benihana Japanese Steakhoujsw                   | Benihan Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihan Japanese Steakhouse
+ Benihana Japanese Steakhouse                    | Benihan Japanese Steakhouse
+ Benihana Japanese Steakyouse                    | Benihan Japanese Steakhouse
+ Bernihana Japanerse Steakhouse                  | Benihan Japanese Steakhouse
+ Bennett's Chpp and Railhoua                     | Bennett's Cho and Railhouise
+ Ben's Chili Bowl                                | Ben's Chili Bowl
+ Bentley's Restaurant On 27                      | Bentley'sa Rwstaurant On 27
+ Bern's Steak House                              | Bern's Steak House
+ Bertucci's Brick Oven Restaurant                | Bertucci's Brick Oven Restaurant
+ Best Rstaurant in San Diego - Mr A's Restaurant | Best Restauramt in San Diego - Mr A's Restarant
+ Beswt Western Rio Grad Inn                      | Best Western Rio Grande Inn
+ Betty'c                                         | Betty'd
+ Beaujolais Bistro                               | Bexujolais Bistro
+ Bahama Breeze                                   | Bhama Breeze
+ Biga Rigerwalk Restaurant                       | Biga Riverwalk Restaurant
+ Big Ed's Ckty Market                            | Big Ed' City Market
+ Big Mama's Kitchen & Catering                   | Big Mama's Kitchen & Catering
+ Big Truck Tacos                                 | Big Truck Tacos
+ Bijou Grille                                    | Bijou Grille
+ Bijou Restgaurant & Bar                         | Bijou Restaurant & Bar
+ Bill's Gamblin' Hall & Saloln                   | Bill;'s Gamblin' Hall & Saloon
+ Billy Goat Tavern                               | Billy Goat Tavfewrn
+ Bin 36                                          | Bin 36
+ Bistrfo Aix                                     | Bistro Aixc
+ Bistro Boudin Restaurant                        | Bistro Bopuin Restaurant
+ Bistro Byronz                                   | Bistro Byronz
+ Bistrfo Elan                                    | Bistro Elan
+ Bistro Ginolina Restaurant                      | Bistro Gijolina Restauraht
+ Bitzee Mama's Restauraznmts                     | Bitzee Mama's Restaurants
+ Cibo Restaurant                                 | Biwa Restaurant
+ Cole' Restaurant                                | Biwa Restaurant
+ Biwa Restaurqnt                                 | Biwa Restaurant
+ B Restaurant                                    | Biwa Restaurant
+ 1515 Restaurant                                 | Biwa Restaurant
+ BJ's Restaueqnt & Brewhouse                     | BJ's Restaurabt & Brewhoue
+ BJ'sd Restaurant & Brdwhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Resgaurasnt & Brewhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Restaueqnt & Brewhouse                     | BJ's Restaurant & Brewhouse
+ BJ's Restaurant & Brewoe                        | BJ's Restaurant & Brewhouse
+ BJ's Restaureant & Brewhouisxe                  | BJ's Restaurant & Brewhouse
+ BJ'sd Restaurant & Brdwhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Resgaurasnt & Brewhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Restaueqnt & Brewhouse                     | BJ's Restaurant & Brewhouse
+ BJ's Restaurant & Brewoe                        | BJ's Restaurant & Brewhouse
+ BJ's Restaureant & Brewhouisxe                  | BJ's Restaurant & Brewhouse
+ BJ'sd Restaurant & Brdwhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Resgaurasnt & Brewhouse                    | BJ's Restaurant & Brewhouse
+ BJ's Restaueqnt & Brewhouse                     | BJ's Restaurant & Brewhouse
+ BJ's Restaurant & Brewoe                        | BJ's Restaurant & Brewhouse
+ BJ's Restaureant & Brewhouisxe                  | BJ's Restaurant & Brewhouse
+ BJ's Restaueqnt & Brewhouse                     | BJ's Restaurant & Brewhouxe
+ BJ's Restaurant & Brewoe                        | BJ's Restaurant & Brewhouxe
+ BJ's Restaureant & Brewhouisxe                  | BJ's Restaurant & Brewhouxe
+ Black Angus Steakhouse                          | Black Ahgus Steakhouse
+ Black Angus Steakhouse                          | Black Ahgus Steakhouse
+ Black Angus Steakhouse                          | Black Angus Steakhnouse
+ Black Angus Steakhouse                          | Black Angus Steakhnouse
+ Blak Angus Steakouse                            | Black Angus Steakhnouse
+ Black Angus Steakhouse                          | Black Angus Stewakhouswe
+ Black Angus Steakhouse                          | Black Angus Stewakhouswe
+ Black Angus Steakhouse                          | Black Angus Syeakhouse
+ Black Angus Steakhouse                          | Black Angus Syeakhouse
+ Blackbird Restaurant                            | Blackbirc Restaueant
+ Black-Eyed Pea Restaurants                      | Black-Ehed Pea Redstaurants
+ Blackbird Restaurant                            | Blackithrj Restaurant & Pb
+ Blacf Sheep Pub                                 | Blasck Shee[ Pub
+ Bull Lee's Bamboo Chopsticks                    | Bll Lee's Bamboo Choo0sticksw
+ Blowfish Sushi To Die For                       | Blowfish Sushi To Die For
+ Blue Agave Club                                 | Blue Agave Club
+ Blue Agave Mexican Restaurant                   | Blue Agave Mexcan Reswtaurant
+ Blue Bamboo                                     | Blue Bamboo
+ Blue City Cafe                                  | Blue City Cafge
+ Bluehour                                        | Bluehour
+ Ble Mesa Grill                                  | Blue Mesa Grill
+ Blue Restuarant & Bar-Restaurant Charlotte      | Blue Restuarant & Bar-Restaurant Charltte
+ Blue Will;ow Restaurant                         | Blue Willow Restaurant
+ Boca Chica Restzurante                          | Boca Chuxa Restzuranted
+ Blhemian Cafe                                   | Bohemian Cafe
+ Bonnell's Fine Texas Cuisin                     | Bonnell's Fine Texas Cuiswine
+ Boston Market: Reswtaurants                     | Boson Market: Restaurants
+ CA' Bianca Italin Restaurant                    | Bottega Italian Restaurant
+ Bouttega Italian Restaurant                     | Bottega Italian Restaurant
+ Bottega Loluie Restaurant and Gourmet Marker    | Bottega Louie Restaurant and Gourmet Market
+ Boudro's Texas Bistro On The Riveralk           | Boudro's Tdxas Bistro Ob The Riverwalk
+ Boundry Restaurant                              | Boundry Restaurant
+ BJ's Restaurant & Brewoe                        | Brenn's Restaurant
+ Brenbaq's Restaurant                            | Brenn's Restaurant
+ B Restaurant                                    | B Restqurant
+ Brewer's Art                                    | Brewer's Art
+ Brick Restaurabt                                | Brick Restaurant
+ Bricktoen Bfewery Restaurant                    | Bricktown Brewery Restaurant
+ Brio Tuscan Gri;e                               | Brio Tuscazn Grille
+ Brix Restarant                                  | Brix Restauyran
+ Brixx Wood Firfed Pizza                         | Brixx Wood Fired Pizza
+ Brooklyn Piozza Company                         | Brooklyn Pizza Company
+ Brooklyn Pizza Compny                           | Brooklyn Pizza Company
+ Brooklyn Piozza Company                         | Brooklyn Pizza Company
+ Brooklyn Pizza Compny                           | Brooklyn Pizza Company
+ Barrio Tapas Lounge                             | Brrio Taps Lounge
+ Brasa Grill Brazilian Steak                     | Brsa Grill Braziliazn Steak
+ Bubba Gumnp Shrimp Co.                          | Bubba Gump Shrimp Co.
+ Bubba Gump Shrimjp Co.                          | Bubba Gump Shrimp Co.
+ Bubba Gump Shrimp Co.                           | Bubba Gump Shrimp Co.
+ Bubba Gump Shrimp Co.                           | Bubba Gump Shrimp Co.
+ Bubba Gump Shrimp Co Restaurantg                | Bubba Gump Shrimp Co Restaurant
+ Bubba Gumnp Shrimp Co.                          | Bubba Gup Shrimp Co.,
+ Bubba Gump Shrimjp Co.                          | Bubba Gup Shrimp Co.,
+ Bubba Gump Shrimp Co.                           | Bubba Gup Shrimp Co.,
+ Bubba Gump Shrimp Co.                           | Bubba Gup Shrimp Co.,
+ Bubba Gump Shrimjp Co.                          | Bubgba Gump Shrinp Co.
+ Bubba Gump Shrimp Co.                           | Bubgba Gump Shrinp Co.
+ Bubba Gump Shrimp Co.                           | Bubgba Gump Shrinp Co.
+ Buca di Beopo - Downtow Indianapolis            | Buca di Bepo - Downtown Indianpolis
+ Buca di Bdppo - Cincinnati - Rooiwood Commons   | Buca di Beppo - Cincinnati - Rookwood Commons
+ Buca di Beppo - Columbus                        | Buca di Beppo - Columbus
+ Buca diu Beppo - Pal Alto                       | Buca di Beppo - Palo Alto
+ Buca di Beppo - Minneapolis                     | Buca ei Beppo - Minneapolis
+ Buckhorn Exchange Restaurant                    | Buckhor Exchange Restazirantg
+ Bucvkhorn Gril;l                                | Buckhorn Grill
+ Bucvkl Owen's Crysrl Palace                     | Buck Oweb's Crystal Palace
+ Buck's of Woodsde                               | Buck'sd of Woodsde
+ Buck's Restautnt                                | Buck's Restaurant
+ Chuy's Restaurant                               | Buck's Restaurant
+ Buffalo Bill's Brew Pub                         | Bufalo Bill's Brew Pub
+ Buffalo Wild Wings Grill & Bsr                  | Buffalo Wild Wings Grill & Bar
+ Bylldog Bar & Grill                             | Bulldog Bar & Grill
+ Burger King                                     | Bureger King
+ Burger King                                     | Bureger King
+ Byrd and Baldwin Bros. Sreakhouse               | Byrd ahd Baldwin Bros. Stedakhouse
+ CA' Bianca Italin Restaurant                    | CA' Biancvga Italian Restaurant
+ Bouttega Italian Restaurant                     | CA' Biancvga Italian Restaurant
+ Cabo Fish Taco                                  | Cabo Fish Tacop
+ Cabo Mix-Mex Grill                              | Cabo Mid-Me Grill
+ Caesars Palace Las Veas Hotel & Casuno          | Caesars Palace Las Vegas Hotel & Casino
+ Cafe Du Mlnfe Coffewe Stand                     | Cafe Du Mpnde Coffee Stand
+ Cafe Dupont                                     | Cafe Dupont
+ Cafe Fanny                                      | Cafe Fanny
+ Cafe Hollandr                                   | Cafe Hollander
+ Cafe Hon                                        | Cafe Hon
+ Cafe Poca Cosa                                  | Cafe Poca Cosa
+ Cafe Tandoor Online Ordering                    | Cafe Tandoor Online Ordering
+ Caffe Riace                                     | Caffe Riace
+ Campisi Restaurant                              | Campisi Restaurant
+ Camp Washington Chili Inc                       | Camp Washington Chili Inc
+ Candelas Rdstaurant                             | Candelas Restaurant
+ Cap City Fine Diner ad Bar: Grandview           | Cap City Fine Diner and Bar: Grandview
+ Capitol Chophouse                               | Capigo Chophouse
+ Cappettop's Italian Retaurabt                   | Cappetto's Italian Restaurant
+ Captain Jpn's                                   | Captain Jon'sx
+ Cqrmelo' Restaurant                             | Carmelo's Restaurant
+ Carnevor                                        | Carnevor
+ Clarion Hotel State Capital                     | Caruon Hotel Statew Capital
+ Casa Bonita                                     | Casa Bonita
+ Casanova Griull                                 | Casanova Grill
+ Casa Rip                                        | Casa Rio
+ Casa-Di-Pizxza                                  | Casas-Di-Pizza
+ Cask 'n Cleaver                                 | Cask 'n Cleaver
+ Catfish Sam's                                   | Catfish Sam'x
+ Caucus Club Restaurant                          | Caucus Club Resauramt
+ Cazbar Turkish Rwstaurant                       | Cazbar Turkish Restaurat
+ Canter's Fairfax Restaurant                     | Caznter's Fairfax Restaurant
+ Celestial Restaurant                            | Celestial Restaurant
+ C'Era Una Volta Italian Restaurant - Alameda    | C'Era Una Volta Itazlian Restaurant - Alazmeda
+ Ceviche Tapas Bar & Restajrant                  | Ceviche Tapas Bar & Restaurant
+ CHAAT BHAVAN                                    | CHAAT BHAVAN
+ Chambers Landing Bar & Griol                    | Chambers Landing Bar & Grill
+ Champps Americana                               | Chanp[ps Americana
+ Chantill;y Restaurant                           | Chantilly Restaurant
+ Chappy's Restayrant                             | Chappy's Restaureant
+ Charlewston                                     | Charleston
+ Charleston's Restaurant - Steak House - Mesa    | Charleston's Restaurant - Steak House - Mesa
+ Chart House - Jacksonville                      | Charr Housew - Jacksonville
+ Chart Hous - Boson                              | Chart House - Boston
+ Chatreau of Spain                               | Chateau of Spain
+ Checkers                                        | Checkers
+ Cheesecake Factory                              | Chedecakje Factory
+ Cheesecake Factory                              | Chedecakje Factory
+ Cheesecake Factory                              | Chedecakje Factory
+ Cheesecake Factory                              | Chedecakje Factory
+ Cheesecake Factory                              | Chedecakje Factory
+ Cheeseburger In Paradise                        | Cheedeburger In Paradis
+ Cheesecake Facort                               | Cheesecaked Factot
+ Cheesecake Factory                              | Cheesecaked Factot
+ Cheesecake Factory                              | Cheesecaked Factot
+ Cheesecake Factory                              | Cheesecaked Factot
+ Cheesecake Factory                              | Cheesecaked Factot
+ Cheesecake Factory                              | Cheesecaked Factot
+ Cheesecake Factoy                               | Cheesecaked Factot
+ Cheesecakw Factolry                             | Cheesecaked Factot
+ Chewesecake Factory                             | Cheesecaked Factot
+ Cheesecake Facort                               | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Facory
+ Cheesecake Factoy                               | Cheesecake Facory
+ Cheesecake Factory                              | Cheesecake Factoirfy
+ Cheesecake Factory                              | Cheesecake Factoirfy
+ Cheesecake Factory                              | Cheesecake Factoirfy
+ Cheesecake Factory                              | Cheesecake Factoirfy
+ Cheesecake Factory                              | Cheesecake Factoirfy
+ Cheesecake Factoy                               | Cheesecake Factoirfy
+ Cheesecakw Factolry                             | Cheesecake Factoirfy
+ Cheesecake Facort                               | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factoy                               | Cheesecake Factory
+ Cheesecakw Factolry                             | Cheesecake Factory
+ Cheesecqied Factory                             | Cheesecake Factory
+ Cherse Cake Factoryh                            | Cheesecake Factory
+ Chewesecake Factory                             | Cheesecake Factory
+ Cheesecake Facort                               | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factoy                               | Cheesecake Factory
+ Cheesecakw Factolry                             | Cheesecake Factory
+ Cheesecqied Factory                             | Cheesecake Factory
+ Cherse Cake Factoryh                            | Cheesecake Factory
+ Chewesecake Factory                             | Cheesecake Factory
+ Cheesecake Facort                               | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecake Factory
+ Cheesecake Factoy                               | Cheesecake Factory
+ Cheesecakw Factolry                             | Cheesecake Factory
+ Cheesecqied Factory                             | Cheesecake Factory
+ Cherse Cake Factoryh                            | Cheesecake Factory
+ Chewesecake Factory                             | Cheesecake Factory
+ Cheesecake Factory                              | Cheesecaqke Factory
+ Cheesecake Factory                              | Cheesecaqke Factory
+ Cheesecake Factory                              | Cheesecaqke Factory
+ Cheesecake Factory                              | Cheesecaqke Factory
+ Cheesecake Factory                              | Cheesecaqke Factory
+ Cheesecake Factoy                               | Cheesecaqke Factory
+ Cheesecakw Factolry                             | Cheesecaqke Factory
+ Cheesecqied Factory                             | Cheesecaqke Factory
+ Chewesecake Factory                             | Cheesecaqke Factory
+ Cheesecake Factory                              | Cheesecske Factory
+ Cheesecake Factory                              | Cheesecske Factory
+ Cheesecake Factory                              | Cheesecske Factory
+ Cheesecake Factory                              | Cheesecske Factory
+ Cheesecake Factory                              | Cheesecske Factory
+ Cheesecake Factoy                               | Cheesecske Factory
+ Cheesecqied Factory                             | Cheesecske Factory
+ Cheever's Cafe                                  | Cheever's Cafe
+ Chef's Exsperience China Bistro                 | Chef's Experience China Bistro
+ Cappy's Restaurant                              | Chef's Restaurant
+ Chef Mavro restaurant                           | Chef's Restaurant
+ Chuy's Restaurant                               | Chef's Restaurant
+ Cibo Restaurant                                 | Chef's Restaurant
+ Cole' Restaurant                                | Chef's Restaurant
+ Chelinos Mexican Restaurant                     | Chelinos Mexian Restaurant
+ Chedn's Chinese Restauant                       | Chen's Chinese Restaurant
+ Ark Chinee Restaurant                           | Chen's Chinese Restaurant
+ Chevys Fresg Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chevys Fresg Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chevys Fresh Mex                                | Chevys Fresh Mex
+ Chiapparellio' Restaurant                       | Chiapparelli's Restaurant
+ Chick-fil-A of Bakersfioeld                     | Chick-fil-A of Bakesfield
+ Chili's Groll & Bar                             | Chili's Grill & Bar
+ Cili's Grill & Bar                              | Chili's Grill & Bar
+ Chili's Groll & Bar                             | Chili's Grill & Bar
+ Cili's Grill & Bar                              | Chili's Grill & Bar
+ Chili's Groll & Bar                             | Chili's Grill & Bar
+ Cili's Grill & Bar                              | Chili's Grill & Bar
+ Cili's Grill & Bar                              | Chili's Grillk & Bar
+ Chikma Btazilian Steakhouse                     | Chima Brazilian Steakhouse
+ China Gourmet                                   | China Gouret
+ Chipotle Mexican Grill - Sa Ramopn              | Chipotld Mexican Grill - San Rmon
+ Chop House                                      | Chop Houwe
+ Cho Sun Galbee                                  | Cho Sun Galbee
+ Chuy's Restaurant                               | Chuy'w Restaursy
+ Citrus anmd Spicew: Thai Fusion Cuisine         | Citrus aqnd Spice: Thai Fusion Cuisine
+ Citrus Restaurant                               | Citrus Restauranr
+ China Expres                                    | Cjina Expres
+ Claim Jumper Restauran                          | Claim Jumper Restaurany
+ Claim Jumper Rwstaurant                         | Claim Jumper Restaurany
+ Clafendon Grill                                 | Clarendon Gril
+ Clark's Fish Camp Seafood Restaurant            | Clark's Fish Camp Seafood Restajrant
+ Cleveland Marriott Downtown at Key Ceter        | Cleveland Marriotty Downtown at Key Center
+ Club One Casiono                                | Club One Casibp
+ Colach Insignia                                 | Coach Insignia
+ Coconut Bay                                     | Coconut Bay
+ Coco's Bakery Restaurant                        | Coco's Bakery Restuyrant
+ Cappy's Restaurant                              | Cole's Restaurant
+ Chuy's Restaurant                               | Cole's Restaurant
+ Cibo Restaurant                                 | Cole's Restaurant
+ Cole' Restaurant                                | Cole's Restaurant
+ Colonnade Boston Hotel                          | Coloinnade Bostopn Hotel
+ Columbi Resraurant: Ybor Coy                    | Columbia Restaurant: Ybor City
+ Conrad Indeianapols hotl                        | Conrad Indianapolis hotel
+ Contrafa Cafe In the Siena                      | Contrada Cafew In the Siena
+ Corso                                           | Corso
+ Cosmi Cafe                                      | Cosmic Cafe
+ Cosmos Cafe                                     | Cosmic Cafe
+ Cosmos Restaurant                               | Cosmkos Restauraby
+ Cosmi Cafe                                      | Cosmos Cafe
+ Cosmos Cafe                                     | Cosmos Cafe
+ Coswm's Pizza                                   | Cosmo's Pizza
+ Court of Two Sisters                            | Court of Two Sisters
+ Cappy's Restaurant                              | Cppy's Restaurant
+ Chuy's Restaurant                               | Cppy's Restaurant
+ Cibo Restaurant                                 | Cppy's Restaurant
+ Cole' Restaurant                                | Cppy's Restaurant
+ Crepevine                                       | Crepevine
+ Croll's Pizza in Alameda                        | Crokl's Pizsa in Alameda
+ Crouching Tger Restaurant                       | Crouching Tiger Restaurat
+ Crystal City Restaurant: Gentlemen's Club       | Crstal City Restaurant: Gentlemen's Club
+ Crystal Ballroom                                | Crystal Ballrom
+ C Side Restaurant                               | C Sid Restaujrant
+ Cuba Libre Restaurant & Rum Bar                 | Cuba Librd Restauant & Rum Bar
+ Cuban Revgolutio Restaurant & Bar               | Cuban Revolution Restaurant & Bar
+ Cuisine                                         | Cuisine
+ Curry House Cupertino                           | Curry Houe Cupertino
+ Cyclone Anaya Midtown                           | Cyclone Anaya Midtown
+ Dakota Jazz Club & Restaurant                   | Dakota Jazz Club & Resturantg
+ Da Mimmo Itslian Restaurant                     | Da Mimmo Italian Restauranty
+ Daniel George Restaurant                        | Daniel George Restaurant
+ Chuy's Restaurant                               | DC Coqt Restaurant
+ Cibo Restaurant                                 | DC Coqt Restaurant
+ Cole' Restaurant                                | DC Coqt Restaurant
+ De Afghanan Kabob House                         | De Afgnanan Kabob House
+ Deanie'w Seafoo                                 | Deanie's Seafood
+ DeGidio's Restaurant & Bar                      | DeGidio's Restaurant & Bar
+ Delectables Restaurant & Catering               | Delectables Restaurant & Catering
+ Del Frisco's Double Eaqle                       | Del Frisco's Double Eagle
+ Del Frisco's Prime Stwak                        | Del Frisco's Prime Steak
+ Delta King Pilothouse Restaurant                | Delta King Pilothouse Restaurant
+ DeLuca's                                        | DeLucva's
+ de Medici Ristorante Italiano                   | de Medici Ristorante Italiano
+ Denver Art Museum                               | Denver Art Museum
+ Diamond Hea Grill                               | Diamond Hedad Grill
+ Di Ciccos Italian Restauranbts                  | Di Ciccos Italian Restaurants
+ Diwks Parkside Cafe                             | Dierks Parkside Cafe
+ Dirty Frank's Hot Dog Palace                    | Dirty Frank's Hot Dog Palace
+ Dick's Last Resorr                              | Dkck's Last Resort
+(500 rows)
+

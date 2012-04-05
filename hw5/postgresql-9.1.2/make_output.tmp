@@ -1,0 +1,570 @@
+make -C src all
+make -C config all
+make[1]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/config'
+make[1]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/config'
+make -C port all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[3]: Nothing to be done for `submake-errcodes'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C timezone all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/timezone'
+make -C ../../src/port all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Nothing to be done for `submake-errcodes'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/timezone'
+make -C backend all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make -C ../../src/port all
+make -C catalog schemapg.h
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/catalog'
+make[3]: `schemapg.h' is up to date.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/catalog'
+make -C access all
+make -C bootstrap all
+make -C catalog all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Nothing to be done for `submake-errcodes'.
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/bootstrap'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C parser all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/bootstrap'
+make -C commands all
+make -C common all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/catalog'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/parser'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/catalog'
+make -C executor all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/common'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/parser'
+make -C foreign all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/common'
+make -C gist all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/commands'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/commands'
+make -C lib all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/foreign'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/foreign'
+make -C libpq all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/lib'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/gist'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/gist'
+make -C hash all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/libpq'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/executor'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/lib'
+make -C main all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/executor'
+make -C nodes all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/libpq'
+make -C optimizer all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/nodes'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/main'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/hash'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/main'
+make -C port all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/hash'
+make -C heap all
+make -C geqo all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/nodes'
+make -C postmaster all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/postmaster'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/port'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/heap'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/geqo'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/heap'
+make -C index all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/postmaster'
+make -C regex all
+make[4]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/port'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/geqo'
+make -C path all
+make -C replication all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/replication'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/regex'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/index'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/index'
+make -C nbtree all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/replication'
+make -C rewrite all
+make[3]: Nothing to be done for `all'.
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/rewrite'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/regex'
+make -C storage all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/path'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/path'
+make -C plan all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/nbtree'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/rewrite'
+make -C tcop all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/nbtree'
+make -C transam all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage'
+make -C buffer all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/plan'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/plan'
+make -C prep all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/tcop'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/transam'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/tcop'
+make -C tsearch all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/transam'
+make -C gin all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/buffer'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/prep'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/buffer'
+make -C file all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/prep'
+make -C util all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/tsearch'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/tsearch'
+make -C utils all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/gin'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access/gin'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/access'
+make -C ../../src/timezone all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/file'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/file'
+make -C freespace all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/util'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/timezone'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer/util'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/optimizer'
+make -C ipc all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils'
+make -C ../../src/port all
+make -C adt all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/freespace'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/freespace'
+make -C large_object all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/ipc'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/ipc'
+make -C lmgr all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/large_object'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/large_object'
+make -C ../backend submake-errcodes
+make -C page all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/adt'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/page'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/lmgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/adt'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/page'
+make -C cache all
+make -C smgr all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/lmgr'
+make -C error all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/error'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/timezone'
+make -C fmgr all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/cache'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/smgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/error'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage/smgr'
+make -C hash all
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/storage'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/cache'
+make -C init all
+make -C mb all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/fmgr'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/hash'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/fmgr'
+make -C misc all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/hash'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/init'
+make -C mmgr all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/init'
+make -C resowner all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb'
+make -C sort all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mmgr'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/misc'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/sort'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/resowner'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mmgr'
+make -C time all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/resowner'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/misc'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/sort'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/time'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/time'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make -C backend/utils/mb/conversion_procs all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs'
+make -C ascii_and_mic all
+make -C cyrillic_and_mic all
+make -C euc_cn_and_mic all
+make -C euc_jp_and_sjis all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+make -C euc_kr_and_mic all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+make -C euc_tw_and_big5 all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+make -C latin2_and_win1250 all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+make -C latin_and_mic all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/latin_and_mic'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+make -C utf8_and_ascii all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+make -C utf8_and_big5 all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+make -C utf8_and_cyrillic all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/latin_and_mic'
+make -C utf8_and_euc_cn all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+make -C utf8_and_euc_jp all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+make -C utf8_and_euc_kr all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+make -C utf8_and_euc_tw all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+make -C utf8_and_gb18030 all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+make -C utf8_and_gbk all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+make -C utf8_and_iso8859 all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+make -C utf8_and_iso8859_1 all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+make -C utf8_and_johab all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+make -C utf8_and_sjis all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+make -C utf8_and_win all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+make -C utf8_and_uhc all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+make -C utf8_and_euc2004 all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_win'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_win'
+make -C utf8_and_sjis2004 all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+make -C euc2004_sjis2004 all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_euc2004'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis2004'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc2004_sjis2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs/euc2004_sjis2004'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/utils/mb/conversion_procs'
+make -C backend/snowball all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/snowball'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/snowball'
+make -C include all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/include'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/include'
+make -C interfaces all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces'
+make -C libpq all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make -C ecpg all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg'
+make -C include all
+make -C pgtypeslib all
+make -C preproc all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/include'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/include'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make -C ecpglib all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/preproc'
+make -C ../../../../src/port all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/ecpglib'
+make -C ../../../../src/interfaces/libpq all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[6]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/ecpglib'
+make -C compatlib all
+make[6]: Nothing to be done for `submake-errcodes'.
+make[6]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/preproc'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/compatlib'
+make -C ../../../../src/interfaces/ecpg/ecpglib all
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/ecpglib'
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make -C ../../../../src/interfaces/libpq all
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[6]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[6]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[6]: Nothing to be done for `all'.
+make[6]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/pgtypeslib'
+make[6]: Nothing to be done for `all'.
+make[6]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/ecpglib'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg/compatlib'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/ecpg'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces'
+make -C backend/replication/libpqwalreceiver all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/replication/libpqwalreceiver'
+make -C ../../../../src/interfaces/libpq all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend/replication/libpqwalreceiver'
+make -C bin all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin'
+make -C initdb all
+make -C pg_ctl all
+make -C pg_dump all
+make -C psql all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_ctl'
+make -C ../../../src/interfaces/libpq all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/initdb'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_dump'
+make -C ../../../src/port all
+make -C ../../../src/interfaces/libpq all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../../../src/port all
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make -C ../../../src/port all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/initdb'
+make -C scripts all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_ctl'
+make -C pg_config all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/scripts'
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make -C ../../../src/interfaces/libpq all
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_dump'
+make -C pg_controldata all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_config'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_controldata'
+make -C ../../../src/port all
+make -C ../../../src/port all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/scripts'
+make -C pg_resetxlog all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_resetxlog'
+make -C ../../../src/port all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_config'
+make -C pg_basebackup all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_controldata'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_basebackup'
+make -C ../../../src/interfaces/libpq all
+make -C ../../../src/port all
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_resetxlog'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make -C ../backend submake-errcodes
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/pg_basebackup'
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/psql'
+make -C ../../../src/interfaces/libpq all
+make -C ../../../src/port all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/interfaces/libpq'
+make[5]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[5]: Nothing to be done for `submake-errcodes'.
+make[5]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin/psql'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/bin'
+make -C pl all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl'
+make -C plpgsql all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl/plpgsql'
+make -C src all
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl/plpgsql/src'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl/plpgsql/src'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl/plpgsql'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/pl'
+make -C makefiles all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/makefiles'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/makefiles'
+make -C test/regress all
+make[2]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/test/regress'
+make -C ../../../src/port all
+make[3]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make -C ../backend submake-errcodes
+make[4]: Entering directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[4]: Nothing to be done for `submake-errcodes'.
+make[4]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/backend'
+make[3]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/port'
+make[2]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src/test/regress'
+make[1]: Leaving directory `/home/saasbook/CS186-Private/hw5/postgresql-9.1.2/src'
+All of PostgreSQL successfully made. Ready to install.
