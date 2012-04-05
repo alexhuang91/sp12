@@ -1,6 +1,6 @@
 # Homework 5: Making similarity joins efficient
 ### CS186, UC Berkeley, Spring 2012
-### Points: [10% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
+### Points: [15% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
 ### Note: *This homework is to be done in pairs!*
 ### Due: Thursday, April 26, 2012, 11:59:59 PM (Note: This is a three-week project. Get started early!)
 
