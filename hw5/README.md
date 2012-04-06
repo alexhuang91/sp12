@@ -56,11 +56,14 @@ First, pull down the hw5 repo using `git pull`. Your postgres database from last
 Try running the following:
 
 ```
-$ cd ~/sp12/hw5/postgres-9.1.2/          # Move to the hw5 postgres dir
+$ cd ~/sp12/hw5/postgres-9.1.2/          # Move to the hw5 postgres dir 
+$ ./configure --prefix=$HOME/pgsql --enable-debug  # Configure postgres.
+$ make -j6                               # Build postgres - this may take some time.
 $ make install -C contrib/pg_trgm/       # Build and install pg_trgm.
-$ ./rebuild_and_restart.sh               # Build and start postgres.
+$ ./rebuild_and_restart.sh               # Rebuild and start postgres.
 $ ~/pgsql/bin/psql -p <PORT> similarity  # Let's try out postgres.
-similarity=# CREATE EXTENSION pg_trgm;
+similarity=# DROP EXTENSION pg_trgm;    -- This may fail, that's OK.
+similarity=# CREATE EXTENSION pg_trgm;  -- Create the actual extension and run a query.
 similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where ra.name = rp.name;
 ```
 
