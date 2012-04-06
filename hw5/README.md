@@ -137,7 +137,9 @@ psql:
 
 >```
 $ ~/pgsql/bin/psql -p <PORT> similarity  # Start a postgres client (we will NOT use do_magic like last time)
-similarity=# select pg_backend_pid();    # Get the process id (=<PID>) for the background postgres server.
+similarity=# SET enable_hashjoin=OFF;    -- See Part 3 for why we have to do this. (Added 4/6.)
+similarity=# SET enable_mergejoin=OFF;
+similarity=# select pg_backend_pid();    -- Get the process id (=<PID>) for the background postgres server.
 ```
 
 gdb (another window):
