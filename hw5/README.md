@@ -51,7 +51,7 @@ The steps of the algorithm are:
 
 ##Part 2: Getting Started
 ###Postgres
-First, pull down the hw5 repo using `git pull`. Your postgres database from last time should be sufficient to get started. If you want to recreate it cleanly, you can delete the `~/pgsql/data/` directory and follow the [instructions from hw4](https://github.com/cs186/sp12/tree/master/hw4) under "Building PostgreSQL", starting at part 3.
+First, pull down the hw5 repo using `git pull`. Your postgres database from last time should be sufficient to get started. If you want to recreate it cleanly, you can delete the `~/pgsql/data/` directory and follow the [instructions from hw4](https://github.com/cs186/sp12/tree/master/hw4) under "Building PostgreSQL", doing parts 3, 4, and 'port conflicts'.
 
 Try running the following:
 
