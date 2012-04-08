@@ -30,3 +30,13 @@ lib*dll.def
 /pgsql.sln.cache
 /Debug/
 /Release/
+
+# emacs tmp files
+*~
+\#*\#
+
+# vim swap files
+.*.sw[a-z]
+
+# mac crud files
+.DS_Store
