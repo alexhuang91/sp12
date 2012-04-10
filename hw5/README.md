@@ -147,7 +147,7 @@ gdb (another window):
 >```
 $ sudo gdb ~/pgsql/bin/postgres
 (gdb) attach <PID>
-(gdb) break nodeNestloop.c:382
+(gdb) break nodeNestloop.c:385
 (gdb) continue
 ```
 
