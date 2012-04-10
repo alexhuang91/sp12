@@ -45,7 +45,7 @@ The steps of the algorithm are:
 4. For each *p<sub>ti</sub>* that points to a tuple equal to *s*, increment *m<sub>s</sub>* by 1, and advance *p<sub>ti</sub>* to the next tuple in the sorted postings list *l<sub>ti</sub>*.
 5. When no more pointers point to *s*, then the value of *m<sub>s</sub>* is finalized.  Apply the similarity function to *m<sub>s</sub>* to compute sim(*m<sub>s</sub>*)
 6. If sim(*m<sub>s</sub>*) exceeds a certain threshold, then emit the concatenated pair *(q ; s)*;
-7. Repeat from #3 until all lists are exhausted.
+7. Repeat from #3 until all *l<sub>ti</sub>* lists (postings lists) are exhausted.
 8. Repeat from #1 until all outer tuples have been exhausted.
 
 
