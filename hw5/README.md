@@ -253,7 +253,7 @@ In order to see if you're understanding the flow of this code, use to gdb to ste
 4. A HeapTuple is postgres's name for a standard tuple which may or may not be on disk. How is a HeapTuple related to a MinimalTuple? How is it related to a TupleTableSlot?
 	- Examine the source code comments for MinimalTuple, HeapTuple, and TupleTableSlot.
 5. If we need to copy and move around tuples in a context where memory is constrained, would we use HeapTuples, MinimalTuples, or TupleTableSlots?
-	- Hint: Take a look at the simjoinUtil.h code (see Part 2: Postgres details for location).
+	- Hint: Take a look at the simjoinUtil.h code (see Part 3: Postgres details for location).
 6. How is memory allocated? How is it freed?
 	- Examine the concept of an ExprContext.
 7. What determines where our "cursor" is in each table? How do we get the next tuple based on that cursor? When do we do so?
