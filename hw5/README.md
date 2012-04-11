@@ -27,6 +27,10 @@ For this homework, we're providing you a lot of tools to find the information yo
 
 We're going to implement a smarter similarity join that makes use of an inverted index to avoid computing similarity between all pairs of values.
 
+#### Informal description
+Take a look at [this thingy](https://docs.google.com/presentation/d/1i_DO0Nsl1a6wdukd5tEfyW4LROj30ru8Tj5kRq30i4s/edit) to get an informal introduction to our similarity join algorithm.
+
+#### Formal description
 When the iterator initializes, we build an inverted index over the trigrams in the join column (i.e., the text column being joined on) of the inner (RHS) table.  The index stores entries of the form *(trigram ; list_of_tuples)*, for each trigram.  As we will see shortly, *list_of_tuples* must be sorted.
 
 To perform the similarity join, we break up the join column of each outer (LHS) tuple into trigrams, and probe the RHS inverted index for each trigram.  If the join column of the outer tuple is broken up into *n* trigrams, then the result of this probe will be *n* postings lists of tuples, one per trigram. 
@@ -37,8 +41,7 @@ We formally define the smarter similarity join algorithm below by first introduc
 
 Assume that the join column of a given outer tuple is broken up into n trigrams: *t<sub>1</sub>*, ..., *t<sub>n</sub>*.  For each trigram *t<sub>i</sub>*, let *l<sub>ti</sub>* represent the sorted postings list associated with trigram *t<sub>i</sub>* in the inverted index.  Let *p<sub>ti</sub>* represent a pointer into the list *l<sub>ti</sub>*.
 
-The steps of the algorithm are:
-
+#### Steps
 1. Consider the join column of a given outer tuple *q*; break it up into trigrams.  Call the trigrams *t<sub>1</sub>*, ..., *t<sub>n</sub>*.
 2. For each trigram *t<sub>i</sub>*, probe the inverted index to find *l<sub>ti</sub>*.  Initialize *p<sub>ti</sub>* to point to the first element of *l<sub>ti</sub>*.
 3. Find the least tuple currently pointed to by any *p<sub>ti</sub>*.  We will refer to this as tuple *s*.  Instantiate a variable, *m<sub>s</sub>* = 1.  Variable *m<sub>s</sub>* represents the number of matches with *s*.
