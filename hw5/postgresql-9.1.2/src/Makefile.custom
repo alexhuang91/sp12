@@ -1,0 +1,1 @@
+CFLAGS := $(patsubst -O2,-O0,$(CFLAGS)) 
