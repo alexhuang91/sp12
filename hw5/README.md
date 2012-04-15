@@ -1,6 +1,6 @@
 # Homework 5: Making similarity joins efficient
 ### CS186, UC Berkeley, Spring 2012
-### Points: [10% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
+### Points: [15% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
 ### Note: *This homework is to be done in pairs!*
 ### Due: Thursday, April 26, 2012, 11:59:59 PM (Note: This is a three-week project. Get started early!)
 
@@ -27,6 +27,10 @@ For this homework, we're providing you a lot of tools to find the information yo
 
 We're going to implement a smarter similarity join that makes use of an inverted index to avoid computing similarity between all pairs of values.
 
+#### Informal description
+Take a look at [this thingy](https://docs.google.com/presentation/d/1i_DO0Nsl1a6wdukd5tEfyW4LROj30ru8Tj5kRq30i4s/edit) to get an informal introduction to our similarity join algorithm.
+
+#### Formal description
 When the iterator initializes, we build an inverted index over the trigrams in the join column (i.e., the text column being joined on) of the inner (RHS) table.  The index stores entries of the form *(trigram ; list_of_tuples)*, for each trigram.  As we will see shortly, *list_of_tuples* must be sorted.
 
 To perform the similarity join, we break up the join column of each outer (LHS) tuple into trigrams, and probe the RHS inverted index for each trigram.  If the join column of the outer tuple is broken up into *n* trigrams, then the result of this probe will be *n* postings lists of tuples, one per trigram. 
@@ -37,30 +41,32 @@ We formally define the smarter similarity join algorithm below by first introduc
 
 Assume that the join column of a given outer tuple is broken up into n trigrams: *t<sub>1</sub>*, ..., *t<sub>n</sub>*.  For each trigram *t<sub>i</sub>*, let *l<sub>ti</sub>* represent the sorted postings list associated with trigram *t<sub>i</sub>* in the inverted index.  Let *p<sub>ti</sub>* represent a pointer into the list *l<sub>ti</sub>*.
 
-The steps of the algorithm are:
-
+#### Steps
 1. Consider the join column of a given outer tuple *q*; break it up into trigrams.  Call the trigrams *t<sub>1</sub>*, ..., *t<sub>n</sub>*.
 2. For each trigram *t<sub>i</sub>*, probe the inverted index to find *l<sub>ti</sub>*.  Initialize *p<sub>ti</sub>* to point to the first element of *l<sub>ti</sub>*.
 3. Find the least tuple currently pointed to by any *p<sub>ti</sub>*.  We will refer to this as tuple *s*.  Instantiate a variable, *m<sub>s</sub>* = 1.  Variable *m<sub>s</sub>* represents the number of matches with *s*.
 4. For each *p<sub>ti</sub>* that points to a tuple equal to *s*, increment *m<sub>s</sub>* by 1, and advance *p<sub>ti</sub>* to the next tuple in the sorted postings list *l<sub>ti</sub>*.
 5. When no more pointers point to *s*, then the value of *m<sub>s</sub>* is finalized.  Apply the similarity function to *m<sub>s</sub>* to compute sim(*m<sub>s</sub>*)
 6. If sim(*m<sub>s</sub>*) exceeds a certain threshold, then emit the concatenated pair *(q ; s)*;
-7. Repeat from #3 until all lists are exhausted.
+7. Repeat from #3 until all *l<sub>ti</sub>* lists (postings lists) are exhausted.
 8. Repeat from #1 until all outer tuples have been exhausted.
 
 
 ##Part 2: Getting Started
 ###Postgres
-First, pull down the hw5 repo using `git pull`. Your postgres database from last time should be sufficient to get started. If you want to recreate it cleanly, you can delete the `~/pgsql/data/` directory and follow the [instructions from hw4](https://github.com/cs186/sp12/tree/master/hw4) under "Building PostgreSQL", starting at part 3.
+First, pull down the hw5 repo using `git pull`. Your postgres database from last time should be sufficient to get started. If you want to recreate it cleanly, you can delete the `~/pgsql/data/` directory and follow the [instructions from hw4](https://github.com/cs186/sp12/tree/master/hw4) under "Building PostgreSQL", doing parts 3, 4, and 'port conflicts'.
 
 Try running the following:
 
 ```
-$ cd ~/sp12/hw5/postgres-9.1.2/          # Move to the hw5 postgres dir
+$ cd ~/sp12/hw5/postgres-9.1.2/          # Move to the hw5 postgres dir 
+$ ./configure --prefix=$HOME/pgsql --enable-debug  # Configure postgres.
+$ make -j6                               # Build postgres - this may take some time.
 $ make install -C contrib/pg_trgm/       # Build and install pg_trgm.
-$ ./rebuild_and_restart.sh               # Build and start postgres.
+$ ./rebuild_and_restart.sh               # Rebuild and start postgres.
 $ ~/pgsql/bin/psql -p <PORT> similarity  # Let's try out postgres.
-similarity=# CREATE EXTENSION pg_trgm;
+similarity=# DROP EXTENSION pg_trgm;    -- This may fail, that's OK.
+similarity=# CREATE EXTENSION pg_trgm;  -- Create the actual extension and run a query.
 similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where ra.name = rp.name;
 ```
 
@@ -134,7 +140,9 @@ psql:
 
 >```
 $ ~/pgsql/bin/psql -p <PORT> similarity  # Start a postgres client (we will NOT use do_magic like last time)
-similarity=# select pg_backend_pid();    # Get the process id (=<PID>) for the background postgres server.
+similarity=# SET enable_hashjoin=OFF;    -- See Part 3 for why we have to do this. (Added 4/6.)
+similarity=# SET enable_mergejoin=OFF;
+similarity=# select pg_backend_pid();    -- Get the process id (=<PID>) for the background postgres server.
 ```
 
 gdb (another window):
@@ -142,7 +150,7 @@ gdb (another window):
 >```
 $ sudo gdb ~/pgsql/bin/postgres
 (gdb) attach <PID>
-(gdb) break nodeNestloop.c:382
+(gdb) break nodeNestloop.c:385
 (gdb) continue
 ```
 
@@ -248,7 +256,7 @@ In order to see if you're understanding the flow of this code, use to gdb to ste
 4. A HeapTuple is postgres's name for a standard tuple which may or may not be on disk. How is a HeapTuple related to a MinimalTuple? How is it related to a TupleTableSlot?
 	- Examine the source code comments for MinimalTuple, HeapTuple, and TupleTableSlot.
 5. If we need to copy and move around tuples in a context where memory is constrained, would we use HeapTuples, MinimalTuples, or TupleTableSlots?
-	- Hint: Take a look at the simjoinUtil.h code (see Part 2: Postgres details for location).
+	- Hint: Take a look at the simjoinUtil.h code (see Part 3: Postgres details for location).
 6. How is memory allocated? How is it freed?
 	- Examine the concept of an ExprContext.
 7. What determines where our "cursor" is in each table? How do we get the next tuple based on that cursor? When do we do so?
