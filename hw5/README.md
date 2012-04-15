@@ -289,7 +289,7 @@ select count(*) from restaurantaddress ra, restaurantphone rp where similarity(r
 That command will also work for this homework, but will use Postgres' default similarity join implementation, instead of the super-awesome algorithm you implemented in this homework.  To use your super-awesome algorithm, you'll need to use a different syntax for the SQL statement.  The following command should produce an equivalent result to the above command, except it will use your super-awesome algorithm, which means it will be faster:
 
 ```
-select count(*) from restaurantaddress ra, restaurantphone rp where ra.name %rp.name;
+select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;
 ```
 
 NOTE that you  need to ensure that THRESH is set to .7 (or whatever the query uses).  The following command will set THRESH to .7:
@@ -311,21 +311,28 @@ similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where
 similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;
 ```
 
+####Larger data
 Bored with the small data set?  Try the large data set!!!  Use the following commands to set it up:
 
 ```
 $HOME/pgsql/bin/psql -p <PORT> postgres -c 'CREATE DATABASE similarity_large;'
-$HOME/pgsql/bin/psql -p <PORT> -d similarity -f ~/sp12/hw5/similarity_data_large.sql
+$HOME/pgsql/bin/psql -p <PORT> -d similarity_large -f ~/sp12/hw5/similarity_large.sql
 ```
 
 Connect to your `similarity_large` database like this.  Don't forget to create the pg_trgm extension the first time you connect!
 
 ```
 $ bin/psql -p <PORT> similarity_large
-similarity=# CREATE EXTENSION pg_trgm;
+similarity_large=# CREATE EXTENSION pg_trgm;
 ```
 
-Okay, that was fun, but equivalence is boring.  You wrote this homework to make Postgres fly!  So, let's try comparing the performance of your super-awesome implementation with Postgres' built-in implementation.  We'll be comparing runtime using Postgres' `EXPLAIN ANALYZE` command.  The final line of the output of this command shows the total runtime of the query in miliseconds.  Please put the output of the following `EXPLAIN ANALYZE` commands (in order) into a file called performance.txt, which you will submit as described in Part 7.  Do not include the output of the `SELECT set_limit(...)` commands.  First, run the below commands in the `similarity` database, and then run the commands again in the `similarity_large` database.  In summary, the analyze.txt file should contain the output of eight queries: the four below on the `similarity` database, followed by the four below on the `similarity_large` database.
+
+####Performance analysis
+Okay, that was fun, but equivalence is boring.  You wrote this homework to make Postgres fly!  So, let's try comparing the performance of your super-awesome implementation with Postgres' built-in implementation.
+
+We'll be comparing runtime using Postgres' `EXPLAIN ANALYZE` command.  The final line of the output of this command shows the total runtime of the query in miliseconds.  Please put the output of the following `EXPLAIN ANALYZE` commands (in order) into a file called performance.txt, which you will submit as described in Part 7.  Do not include the output of the `SELECT set_limit(...)` commands.
+
+First, run the below commands in the `similarity` database, and then run the commands again in the `similarity_large` database.  In summary, the performance.txt file should contain the output of eight queries: the four below on the `similarity` database, followed by the four below on the `similarity_large` database.
 
 ```
 similarity=# SELECT set_limit(.3);
