@@ -5,7 +5,6 @@
 
 #include <ctype.h>
 
-//#include "trgm.h"
 #include "utils/trgm.h"
 
 #include "catalog/pg_type.h"
@@ -38,16 +37,13 @@ Datum
 set_limit(PG_FUNCTION_ARGS)
 {
 	float4		nlimit = PG_GETARG_FLOAT4(0);
-	//elog(NOTICE, "NYO %d", &trgm_limit);
 	if (nlimit < 0 || nlimit > 1.0)
 		elog(ERROR, "wrong limit, should be between 0 and 1");
-	//trgm_limit = nlimit;
 
 	char buf[10];
 	sprintf(buf,"%f", nlimit);
 	buf[9] = 0;
 	setenv("TRGM_LIMIT", buf, true);
-	elog(NOTICE, "NYO! %f", trgm_limit);
 	PG_RETURN_FLOAT4(trgm_limit);
 }
 

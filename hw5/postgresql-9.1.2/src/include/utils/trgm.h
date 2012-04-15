@@ -22,8 +22,6 @@
  */
 #define IGNORECASE
 
-#define DIVUNION
-
 /* operator strategy numbers */
 #define SimilarityStrategyNumber	1
 #define DistanceStrategyNumber		2
