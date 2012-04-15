@@ -278,25 +278,75 @@ Here are some functions you may want to make sure you're aware of:
 
 ##Part 6: Testing
 
-You should be able to use the same tests as provided in hw4. HOWEVER, note that instead of running a query like this:
-```select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name, rp.name) > 0.7;```
+**If you started on this homework before 2AM PDT on 15 April 2012, make sure you follow the instructions in the Piazza post before continuing with this part!!!**
 
-you must instead run
+Okay, time to verify that all is in working order.  We're going to compare your implementation with Postgres' default trigram join implementation.  Remember how you tested the last homework by using this command?
 
-```select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;```
+```
+select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name, rp.name) > 0.7;
+```
 
-while making sure THRESH is set to .7 (or whatever the query uses).
+That command will also work for this homework, but will use Postgres' default similarity join implementation, instead of the super-awesome algorithm you implemented in this homework.  To use your super-awesome algorithm, you'll need to use a different syntax for the SQL statement.  The following command should produce an equivalent result to the above command, except it will use your super-awesome algorithm, which means it will be faster:
 
-####Setting THRESH
-Your code by default uses the same threshhold as pg_trgm's % operator. Thus, in order to change THRESH, just do
+```
+select count(*) from restaurantaddress ra, restaurantphone rp where ra.name %rp.name;
+```
+
+NOTE that you  need to ensure that THRESH is set to .7 (or whatever the query uses).  The following command will set THRESH to .7:
 
 ```
 similarity=# SELECT set_limit(.7);
 ```
 
-(pg_trgm calls it a "trigram limit" for whatever reason.)
+To see the current value of THRESH, use the following command:
+
+```
+similarity=# SELECT show_limit();
+```
+
+So the basic idea behind testing your algorithm for correctness is to make sure that Postgres' default similarity join implementation returns the same results as your super-awesome implementation.  For your peace of mind, we recommend you test using the following two commands, for various values of THRESH:
+
+```
+similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name, rp.name) > show_limit();
+similarity=# select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;
+```
+
+Bored with the small data set?  Try the large data set!!!  Use the following commands to set it up:
+
+```
+$HOME/pgsql/bin/psql -p <PORT> postgres -c 'CREATE DATABASE similarity_large;'
+$HOME/pgsql/bin/psql -p <PORT> -d similarity -f ~/sp12/hw5/similarity_data_large.sql
+```
+
+Connect to your `similarity_large` database like this.  Don't forget to create the pg_trgm extension the first time you connect!
+
+```
+$ bin/psql -p <PORT> similarity_large
+similarity=# CREATE EXTENSION pg_trgm;
+```
+
+Okay, that was fun, but equivalence is boring.  You wrote this homework to make Postgres fly!  So, let's try comparing the performance of your super-awesome implementation with Postgres' built-in implementation.  We'll be comparing runtime using Postgres' `EXPLAIN ANALYZE` command.  The final line of the output of this command shows the total runtime of the query in miliseconds.  Please put the output of the following `EXPLAIN ANALYZE` commands (in order) into a file called performance.txt, which you will submit as described in Part 7.  Do not include the output of the `SELECT set_limit(...)` commands.  First, run the below commands in the `similarity` database, and then run the commands again in the `similarity_large` database.  In summary, the analyze.txt file should contain the output of eight queries: the four below on the `similarity` database, followed by the four below on the `similarity_large` database.
+
+```
+similarity=# SELECT set_limit(.3);
+similarity=# EXPLAIN ANALYZE select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name,rp.name) > show_limit();
+similarity=# EXPLAIN ANALYZE select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;
+similarity=# SELECT set_limit(.7);
+similarity=# EXPLAIN ANALYZE select count(*) from restaurantaddress ra, restaurantphone rp where similarity(ra.name,rp.name) > show_limit();
+similarity=# EXPLAIN ANALYZE select count(*) from restaurantaddress ra, restaurantphone rp where ra.name % rp.name;
+```
+
+If you implemented the algorithm correctly, your implementation should be faster than Postgres' built-in similarity join. 
 
 ##Part 7: Turn-in
-&lt;Under Construction&gt;
 
-Turn-in instructions will be finalized soon. In the meantime, what you're probably really asking is if you need to turn in the Questions from Part 4. The answer is yes, you should produce a file called "part4.txt" which answers the questions. However, do not worry about being thorough in your answers -- answering these questions is mostly to help YOUR understanding so you can do the assignment more easily. We just want to make sure you took the time to understand Nested Loops join, but we don't want to read an essay about it.
+Please submit the following:
+
+1. nodeSimjoin.c
+2. execnodes.h
+3. part4.txt - The answers to the questions from Part 4.  Do not worry about being thorough in your answers -- answering these questions is mostly to help YOUR understanding so you can do the assignment more easily. We just want to make sure you took the time to understand Nested Loops join, but we don't want to read an essay about it.
+4. performance.txt - The eight EXPLAIN ANALYZE outputs from Part 6, in order.
+5. MY.PARTNERS - Lists the other person you work with, this should be autogenerated when you run the submit command.
+6. If you are using slip days please also turn in a README with a single digit indicating the number of slip days you wish to use. For example, if I wanted to use two slip days, my README would consist of only line with the number: `2`
+
+To submit your assignment, save the submission files listed above in a directory called `hw5` within your cs186 home directory, and then submit using `submit hw5`.
