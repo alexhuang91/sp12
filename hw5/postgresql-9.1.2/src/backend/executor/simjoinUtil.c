@@ -86,7 +86,7 @@ SimIndexEntryId ExecGetFirstEntryIdForTrigram(SimInvertedIndex *invertedIndex,
 	  return imid+1;
 	}
       }
-      return imid;
+      return 0;
     }
   }
   // key not found
