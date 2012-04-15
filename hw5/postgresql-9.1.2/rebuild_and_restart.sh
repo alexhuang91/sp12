@@ -14,6 +14,7 @@ lastModifiedH=`date -r trgm.h +%s`
 
 # Print out errors/warnings we found
 if [ $numError != '0' ]; then
+    make # Remake to show compiler errors
     echo -e "\e[00;31mERROR:\e[00m Compilation failed."
     exit
 fi

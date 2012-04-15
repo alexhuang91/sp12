@@ -256,7 +256,7 @@ gtrgm_consistent(PG_FUNCTION_ARGS)
 				float4		tmpsml = cnt_sml(key, qtrg);
 
 				/* strange bug at freebsd 5.2.1 and gcc 3.3.3 */
-				res = (*(int *) &tmpsml == *(int *) &trgm_limit || tmpsml > trgm_limit) ? true : false;
+				res = (tmpsml > trgm_limit) ? true : false;
 			}
 			else if (ISALLTRUE(key))
 			{					/* non-leaf contains signature */

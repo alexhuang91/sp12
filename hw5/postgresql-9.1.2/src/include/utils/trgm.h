@@ -21,6 +21,7 @@
  * handle ~~* with case-sensitive trigrams" errors.
  */
 #define IGNORECASE
+
 #define DIVUNION
 
 /* operator strategy numbers */
@@ -29,6 +30,8 @@
 #define LikeStrategyNumber			3
 #define ILikeStrategyNumber			4
 
+#define trgm_limit_str getenv("TRGM_LIMIT")
+#define trgm_limit ((trgm_limit_str == NULL || trgm_limit_str[0] == '\0') ? .3 : atof(trgm_limit_str))
 
 typedef char trgm[3];
 
@@ -98,8 +101,6 @@ typedef char *BITVECP;
 #define GETSIGN(x)		( (BITVECP)( (char*)x+TRGMHDRSIZE ) )
 #define GETARR(x)		( (trgm*)( (char*)x+TRGMHDRSIZE ) )
 #define ARRNELEM(x) ( ( VARSIZE(x) - TRGMHDRSIZE )/sizeof(trgm) )
-
-extern float4 trgm_limit;
 
 TRGM	   *generate_trgm(char *str, int slen);
 TRGM	   *generate_wildcard_trgm(const char *str, int slen);

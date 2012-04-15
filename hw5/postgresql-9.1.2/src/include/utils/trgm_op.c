@@ -14,7 +14,7 @@
 
 PG_MODULE_MAGIC;
 
-float4		trgm_limit = 0.3f;
+
 
 PG_FUNCTION_INFO_V1(set_limit);
 Datum		set_limit(PG_FUNCTION_ARGS);
@@ -42,7 +42,7 @@ set_limit(PG_FUNCTION_ARGS)
 
 	if (nlimit < 0 || nlimit > 1.0)
 		elog(ERROR, "wrong limit, should be between 0 and 1");
-	trgm_limit = nlimit;
+	elog(ERROR, "Shouldn't be here");
 	PG_RETURN_FLOAT4(trgm_limit);
 }
 
