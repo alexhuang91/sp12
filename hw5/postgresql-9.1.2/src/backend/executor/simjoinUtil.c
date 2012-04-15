@@ -62,14 +62,35 @@ SimIndexEntryId ExecGetFirstEntryIdForTrigram(SimInvertedIndex *invertedIndex,
   }
 
   SimIndexEntryId j;
-  for (j = (SimIndexEntryId) 0; j < invertedIndex->numEntries; j ++) {
-    trgm *innerTrgm = GET_TRGM(j);
-    if (CMPTRGM(t, innerTrgm) == 0) {
-      return j;
+  int imin = 0;
+  int imax = invertedIndex->numEntries-1;
+
+  // BINARY SEARCH BY WIKIPEDIA BECAUSE I'M LAZY AND DON'T WANT TO DEBUG MY OWN LESS PRETTY CODE
+  // continue searching while [imin,imax] is not empty
+  while (imax >= imin) {
+    // calculate the midpoint for roughly equal partition
+    int imid = (imin + imax) / 2;
+    int cmp = CMPTRGM(GET_TRGM(imid), t);
+    
+    // determine which subarray to search
+    if      (cmp <  0)
+      // change min index to search upper subarray
+      imin = imid + 1;
+    else if (cmp > 0 )
+      // change max index to search lower subarray
+      imax = imid - 1;
+    else {
+      // Scan backwards to find the start
+      for (; imid >= 0; imid--) {
+	if (CMPTRGM(t, GET_TRGM(imid)) != 0) {
+	  return imid+1;
+	}
+      }
+      return imid;
     }
   }
-
-  return -1;
+  // key not found
+  return NULL_ENTRY_ID;
 }
 
 /*
@@ -91,7 +112,7 @@ SimIndexEntryId ExecGetNextEntryId(SimInvertedIndex *invertedIndex,
     // We know that nextEntryId's trigram is the same as the original one -- good to go!
     return nextEntryId;
   } else {
-    // This trigram has no more associated inner tuples!
+    // This trigram has no more associated inner tuples
     return NULL_ENTRY_ID;
   }
 }
