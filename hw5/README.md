@@ -275,8 +275,9 @@ Here are some functions you may want to make sure you're aware of:
 
 - [ExecFetchSlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00660) - fetches the MinimalTuple out of a TupleTableSlot
 - [ExecCopySlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00585) - fetches and copies the MinimalTuple out of a TupleTableSlot
-- ReconstructInnerTupleSlot - Places a MinimalTuple inside an (inner) TupleTableSlot.
-- GetSimJoinColumn - Returns the column being joined on within a particular tuple.
+- ReconstructInnerTupleSlot (nodeSimjoin.c) - Places a MinimalTuple inside an (inner) TupleTableSlot.
+- GetSimJoinColumn (nodeSimjoin.c) - Returns the column being joined on within a particular tuple.
+- cmptup(tup1, tup2) (simjoinUtil.c) - Compares two tuples -- use this to look for equality or to find the 'least' tuple! Returns -1 if tup1<tup2, 0 if they're equal, 1 otherwise. (**Added 4/17**)
 
 ##Part 6: Testing
 
