@@ -249,7 +249,9 @@ Now use gdb to examine how nodeNestloop.c executes in order to answer the follow
 In order to see if you're understanding the flow of this code, use to gdb to step through the code in nodeNestloop.c until you are able to answer the following questions:
 
 1. Which function is called first? Which function is called repeatedly? Which function is called last?
-2. What does ExecReScanNestLoop do?
+2. What does ExecReScanNestLoop do? Namely, what does the "ExecReScan" mean?
+	- Don't try getting postgres to call ExecReScanNestLoop. Instead, look for where "ExecReScan" is called within nodeNestloop and try to figure out what it's doing.
+ 	- **Updated 4/17 to clarify that you should figure out what "ExecReScan" means, not the precise behavior of ExecReScanNestLoop.**
 3. What is a TupleTableSlot?
 	- Examine the address of the TupleTableSlot over multiple iterations of ExecNestLoop.
  	- Examine the contents of the TupleTableSlot.
