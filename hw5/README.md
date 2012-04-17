@@ -167,7 +167,7 @@ back in gdb:
 (gdb) up
 (gdb) print node
 (gdb) print *node
-(gdb) print node->join->plan->total_cost   # Fixed 4/17
+(gdb) print node->total_cost   # Not found? Make sure you called 'up'!
 (gdb) down
 (gdb) print nlstate->nl_NeedNewOuter
 (gdb) next
