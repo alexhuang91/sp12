@@ -167,7 +167,7 @@ back in gdb:
 (gdb) up
 (gdb) print node
 (gdb) print *node
-(gdb) print node->total_cost
+(gdb) print node->join->plan->total_cost   # Fixed 4/17
 (gdb) down
 (gdb) print nlstate->nl_NeedNewOuter
 (gdb) next
