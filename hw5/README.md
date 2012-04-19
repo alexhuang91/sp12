@@ -167,7 +167,7 @@ back in gdb:
 (gdb) up
 (gdb) print node
 (gdb) print *node
-(gdb) print node->total_cost
+(gdb) print node->total_cost   # Not found? Make sure you called 'up'!
 (gdb) down
 (gdb) print nlstate->nl_NeedNewOuter
 (gdb) next
@@ -249,7 +249,9 @@ Now use gdb to examine how nodeNestloop.c executes in order to answer the follow
 In order to see if you're understanding the flow of this code, use to gdb to step through the code in nodeNestloop.c until you are able to answer the following questions:
 
 1. Which function is called first? Which function is called repeatedly? Which function is called last?
-2. What does ExecReScanNestLoop do?
+2. What does ExecReScanNestLoop do? Namely, what does the "ExecReScan" mean?
+	- Don't try getting postgres to call ExecReScanNestLoop. Instead, look for where "ExecReScan" is called within nodeNestloop and try to figure out what it's doing.
+ 	- **Updated 4/17 to clarify that you should figure out what "ExecReScan" means, not the precise behavior of ExecReScanNestLoop.**
 3. What is a TupleTableSlot?
 	- Examine the address of the TupleTableSlot over multiple iterations of ExecNestLoop.
  	- Examine the contents of the TupleTableSlot.
@@ -273,8 +275,9 @@ Here are some functions you may want to make sure you're aware of:
 
 - [ExecFetchSlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00660) - fetches the MinimalTuple out of a TupleTableSlot
 - [ExecCopySlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00585) - fetches and copies the MinimalTuple out of a TupleTableSlot
-- ReconstructInnerTupleSlot - Places a MinimalTuple inside an (inner) TupleTableSlot.
-- GetSimJoinColumn - Returns the column being joined on within a particular tuple.
+- ReconstructInnerTupleSlot (nodeSimjoin.c) - Places a MinimalTuple inside an (inner) TupleTableSlot.
+- GetSimJoinColumn (nodeSimjoin.c) - Returns the column being joined on within a particular tuple.
+- cmptup(tup1, tup2) (simjoinUtil.c) - Compares two tuples -- use this to look for equality or to find the 'least' tuple! Returns -1 if tup1<tup2, 0 if they're equal, 1 otherwise. (**Added 4/17**)
 
 ##Part 6: Testing
 
