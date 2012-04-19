@@ -55,7 +55,7 @@ typedef int SimIndexEntryId;
 
 /******************* In-Memory Inverted Index functions  *******************/
 /** Creates a new SimInvertedIndex. The parameter is unused -- just provide NULL. */
-SimInvertedIndex* CreateInvertedIndex(void *nothing);
+SimInvertedIndex* CreateSimInvertedIndex(void *nothing);
 
 /** Stores a new SimIndexEntry in the given Inverted Index. */
 void ExecStoreSimIndexEntry( SimInvertedIndex *invertedIndex,
