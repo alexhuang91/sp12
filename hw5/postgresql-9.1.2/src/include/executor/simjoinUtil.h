@@ -85,5 +85,5 @@ SimIndexEntryId ExecGetNextEntryId(SimInvertedIndex *invertedIndex,
 				   SimIndexEntryId currentEntryId);
 
 int cmpIndex(const void *a, const void *b);
-uint64 cmptup(MinimalTuple a, MinimalTuple b);
+int cmptup(MinimalTuple a, MinimalTuple b);
 #endif
