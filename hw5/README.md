@@ -1,4 +1,5 @@
 # Homework 5: Making similarity joins efficient
+**NOTE:** There have been 2 major updates to this code, released on [4/19](http://piazza.com/class#spring2012/cs186/1211) and [4/15](http://piazza.com/class#spring2012/cs186/1149). Please make sure you've followed the update instructions linked to for each as applicable.
 ### CS186, UC Berkeley, Spring 2012
 ### Points: [15% of your final grade](https://sites.google.com/a/cs.berkeley.edu/cs186-s12/basic-info/grading-info)
 ### Note: *This homework is to be done in pairs!*
