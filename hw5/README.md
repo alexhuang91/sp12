@@ -200,10 +200,10 @@ You should examine each of the following files -- you are responsible for determ
 
 <table>
 <tr><td>Logical code</td><td>File location</td><td>Need to edit?</td></tr>
-<tr><td>Nested Loops join algorithm</td><td>src/<b>backend</b>/executor/nodeNestloop.c</td><td></td></tr>
+<tr><td>Nested Loops join algorithm</td><td>src/<b>backend</b>/executor/nodeNestloop.c</td><td>NO</td></tr>
 <tr><td>Similarity join algorithm</td><td>src/backend/executor/nodeSimJoin.c</td><td>YES</td></tr>
-<tr><td>Similarity join index utilities</td><td>src/backend/executor/simjoinUtil.c</td><td></td></tr>
-<tr><td>Similarity join utilities header</td><td>src/<b>include</b>/executor/simjoinUtil.h</td><td></td></tr>
+<tr><td>Similarity join index utilities</td><td>src/backend/executor/simjoinUtil.c</td><td>NO</td></tr>
+<tr><td>Similarity join utilities header</td><td>src/<b>include</b>/executor/simjoinUtil.h</td><td>NO</td></tr>
 <tr><td>NestLoopState and SimJoinState structs</td><td>src/include/<b>nodes</b>/execnodes.h</td><td>YES</td></tr>
 </table>
 
