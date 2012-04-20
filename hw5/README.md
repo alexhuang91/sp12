@@ -274,7 +274,6 @@ With the questions in Part 4 answered, and equipped with an understanding of the
 ###Useful Postgres functions
 Here are some functions you may want to make sure you're aware of:
 
-- [ExecFetchSlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00660) - fetches the MinimalTuple out of a TupleTableSlot
 - [ExecCopySlotMinimalTuple](http://doxygen.postgresql.org/execTuples_8c_source.html#l00585) - fetches and copies the MinimalTuple out of a TupleTableSlot
 - ReconstructInnerTupleSlot (nodeSimjoin.c) - Places a MinimalTuple inside an (inner) TupleTableSlot.
 - GetSimJoinColumn (nodeSimjoin.c) - Returns the column being joined on within a particular tuple.
