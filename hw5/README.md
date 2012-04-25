@@ -45,7 +45,7 @@ Assume that the join column of a given outer tuple is broken up into n trigrams:
 #### Steps
 1. Consider the join column of a given outer tuple *q*; break it up into trigrams.  Call the trigrams *t<sub>1</sub>*, ..., *t<sub>n</sub>*.
 2. For each trigram *t<sub>i</sub>*, probe the inverted index to find *l<sub>ti</sub>*.  Initialize *p<sub>ti</sub>* to point to the first element of *l<sub>ti</sub>*.
-3. Find the least tuple currently pointed to by any *p<sub>ti</sub>*.  We will refer to this as tuple *s*.  Instantiate a variable, *m<sub>s</sub>* = 1.  Variable *m<sub>s</sub>* represents the number of matches with *s*.
+3. Find the least tuple currently pointed to by any *p<sub>ti</sub>*.  We will refer to this as tuple *s*.  Instantiate a variable, *m<sub>s</sub>* = 0.  Variable *m<sub>s</sub>* represents the number of matches with *s*.
 4. For each *p<sub>ti</sub>* that points to a tuple equal to *s*, increment *m<sub>s</sub>* by 1, and advance *p<sub>ti</sub>* to the next tuple in the sorted postings list *l<sub>ti</sub>*.
 5. When no more pointers point to *s*, then the value of *m<sub>s</sub>* is finalized.  Apply the similarity function to *m<sub>s</sub>* to compute sim(*m<sub>s</sub>*)
 6. If sim(*m<sub>s</sub>*) exceeds a certain threshold, then emit the concatenated pair *(q ; s)*;
