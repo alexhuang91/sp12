@@ -91,6 +91,51 @@ ExecInitSimJoin(SimJoinState *node, EState *estate)
 	node->invertedIndex = invertedIndex;
 
 	/* YOUR CODE HERE */
+	
+	/* Most of the Init Work has been done in ExecInitSimJoin in nodeNestloop.c     
+	    so we work with (SimJoinState *node) and (EState *estate) which are passed in. 
+	*/
+	
+	/* Step 1: Build an Inverted Index [trigram => List<Tuple or Tuple IDs>
+	 * from the inner relation.  The inverted index is in invertedIndex
+	 * which is also node -> invertedIndex which is returned at the end
+	 * and made accessible to ExecSimJoin?
+	 */
+	
+	innerTupleSlot = ExecProcNode(innerPlan);    // get first inner tuple
+	// loop through each inner tuple
+	while (!TupIsNull(innerTupleSlot)) {
+	    char *joinColString = GetSimJoinColumn(node, innerTupleSlot, true); // get relevant string from tuple
+	    TRGM *trgms = generate_trgm(joinColString, strlen(joinColString));  // create TRGM string from the string
+	    trgm* trgmArray = GETARR(trgms);                                    // translate into an array
+	    
+	    elog(LOG, "First trigram: %.3s", (char*) trgmArray); // prints " a"
+        trgmArray ++;
+        elog(LOG, "Second trigram: %.3s", (char*) trgmArray); // prints " ap"
+	    
+	    
+	    // loop through each trigram and insert into index
+	    int i;
+      int size = ARRNELEM(trgmArray);
+	    for ( i = 0; i < size; i++) {
+          elog(LOG, "ARRAYSIZE: %s", ARRNELEM(trgmArray));
+          elog(LOG, "i: %d", i);
+	        ExecStoreSimIndexEntry(invertedIndex, &trgmArray[i], ExecCopySlotMinimalTuple(innerTupleSlot), 0);
+	    }                                    
+	    
+	    elog(LOG, "First trigram: %.3s", (char*) trgmArray); // prints " a"
+        trgmArray ++;
+        elog(LOG, "Second trigram: %.3s", (char*) trgmArray); // prints " ap"
+	
+	
+	    innerTupleSlot = ExecProcNode(innerPlan);    // get next tuple
+	}
+	
+	ExecFinalizeSimInvertedIndex(invertedIndex);
+	
+	
+	
+	
 	elog(NOTICE, "Current similarity threshold: %.4f", THRESH);
 	elog(ERROR, "Whoa, there, nelly. ExecInitSimJoin ain't be implemented yet!");
 
